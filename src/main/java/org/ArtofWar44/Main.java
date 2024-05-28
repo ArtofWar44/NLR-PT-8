@@ -2,6 +2,8 @@ package org.ArtofWar44;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        LoyaltyProgram loyaltyProgram = new LoyaltyProgram();
+        TestData.initialize(loyaltyProgram);
+        loyaltyProgram.run();
     }
 }
