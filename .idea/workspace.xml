@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/LoyaltyProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/LoyaltyProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawSomeVendingItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawSomeVendingItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item$Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/LoyaltyProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/LoyaltyProgram.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

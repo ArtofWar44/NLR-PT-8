@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
     public class LoyaltyProgram {
-        private static final String INVENTORY_FILE = "/mnt/data/vendingmachine.csv"; // csv file goes here
+        private static final String INVENTORY_FILE = "/mnt/data/vendingmachine.csv"; // csv file goes here - not available in free version of intellij
         private static final int MAX_QUANTITY = 5;
 
         private Map<String, Item> inventory = new HashMap<>();
@@ -24,10 +24,10 @@ import java.util.Scanner;
             Scanner scanner = new Scanner(System.in);
 
             while (true) {
-                System.out.println("Paw Points Vending");
-                System.out.println("1. Display Vending Machine Items");
+                System.out.println("PawSome Vending");
+                System.out.println("1. Display Doggy Vending Machine Items");
                 System.out.println("2. Purchase");
-                System.out.println("3. Check Paw Points Balance");
+                System.out.println("3. Check PawSome Points Balance");
                 System.out.println("4. Exit");
                 System.out.print("Choose an option: ");
                 int choice = scanner.nextInt();
@@ -85,7 +85,7 @@ import java.util.Scanner;
         }
 
         private void feedPawPoints(Scanner scanner) {
-            System.out.print("Enter amount to feed: ");
+            System.out.print("Enter amount to redeem: ");
             double amount = scanner.nextDouble();
             scanner.nextLine(); // Consume newline
             pawPointsBalance += amount;
