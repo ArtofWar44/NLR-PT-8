@@ -1,16 +1,13 @@
 package org.ArtofWar44;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 
     public class LoyaltyProgram {
-        private static final String INVENTORY_FILE = "/mnt/data/vendingmachine.csv"; // csv file goes here - not available in free version of intellij
         private static final int MAX_QUANTITY = 5;
-
         private Map<String, Item> inventory = new HashMap<>();
         private double pawPointsBalance = 20.00;
 
@@ -64,7 +61,7 @@ import java.util.Scanner;
             while (true) {
                 System.out.println("Purchase Menu:");
                 System.out.println("1. Use Paw Points");
-                System.out.println("2. Select Reward Item");
+                System.out.println("2. Select Rewards Item");
                 System.out.println("3. Finish Transaction");
                 System.out.print("Choose an option: ");
                 int choice = scanner.nextInt();
@@ -118,18 +115,22 @@ import java.util.Scanner;
         }
 
         private void restockInventory() {
-            try (Scanner fileScanner = new Scanner(new File(INVENTORY_FILE))) {
-                while (fileScanner.hasNextLine()) {
-                    String[] parts = fileScanner.nextLine().split(",");
-                    String slotId = parts[0];
-                    String name = parts[1];
-                    double price = Double.parseDouble(parts[2]);
-                    Item.Category category = Item.Category.valueOf(parts[3].toUpperCase());
-
-                    inventory.put(slotId, category.createItem(name, price));
-                }
-            } catch (FileNotFoundException e) {
-                System.err.println("Error: Inventory file not found.");
-            }
+            inventory.put("A1", Item.Category.DOG_TOY.createItem("Squeaky Ball", 6.00));
+            inventory.put("A2", Item.Category.DOG_TOY.createItem("Rope Tug Toy", 8.00));
+            inventory.put("A3", Item.Category.DOG_TOY.createItem("Plush Chew Toy", 10.00));
+            inventory.put("A4", Item.Category.DOG_TOY.createItem("Rubber Chew Toy", 10.00));
+            inventory.put("B1", Item.Category.RAWHIDE_BONE.createItem("Twisted Rawhide", 6.50));
+            inventory.put("B2", Item.Category.RAWHIDE_BONE.createItem("Knotted Rawhide", 8.50));
+            inventory.put("B3", Item.Category.RAWHIDE_BONE.createItem("Compressed", 11.50));
+            inventory.put("B4", Item.Category.RAWHIDE_BONE.createItem("Flavored", 11.75));
+            inventory.put("C1", Item.Category.BULLY_STICK.createItem("Standard", 14.00));
+            inventory.put("C2", Item.Category.BULLY_STICK.createItem("Braided", 19.50));
+            inventory.put("C3", Item.Category.BULLY_STICK.createItem("Jumbo", 15.50));
+            inventory.put("C4", Item.Category.BULLY_STICK.createItem("Curly", 18.50));
+            inventory.put("D1", Item.Category.MYSTERY_TREAT.createItem("Peanut Butter Surprise", 15.00));
+            inventory.put("D2", Item.Category.MYSTERY_TREAT.createItem("Cheese & Bacon Surprise", 15.00));
+            inventory.put("D3", Item.Category.MYSTERY_TREAT.createItem("Chicken & Sweet Potato Surprise", 15.00));
+            inventory.put("D4", Item.Category.MYSTERY_TREAT.createItem("Beef and Apple Surprise", 15.00));
         }
     }
+

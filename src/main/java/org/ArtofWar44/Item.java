@@ -1,6 +1,6 @@
 package org.ArtofWar44;
 
-public abstract class Item {
+abstract class Item {
     private int itemId;
     private final String name;
     private final double price;
