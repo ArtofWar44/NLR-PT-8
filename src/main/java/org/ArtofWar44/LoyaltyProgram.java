@@ -68,7 +68,7 @@ public class LoyaltyProgram {
             }
         }
 
-        scanner.close();
+        scanner.close();   //to end first scanner
     }
 
     private void customerLogin(Scanner scanner) {
@@ -176,7 +176,7 @@ public class LoyaltyProgram {
         System.out.println();
     }
 
-    // redeemPawPoints method prompts the EU to enter a 4-digit loyalty code (0000).
+    // redeemPawPoints method prompts the EU to enter a 4-digit loyalty code (0000) from their receipt.
     //If the entered code is correct, the EU earns 1 Paw Point. If not, the error message is displayed, and the user is asked to try again.
     private boolean redeemPawPoints(Scanner scanner) {
         System.out.print("Enter 4-digit loyalty code to redeem 1 point: ");

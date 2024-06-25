@@ -1,6 +1,5 @@
 package org.ArtofWar44.Dao;
 
-import org.ArtofWar44.DaoException;
 import org.ArtofWar44.Model.Transaction;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;

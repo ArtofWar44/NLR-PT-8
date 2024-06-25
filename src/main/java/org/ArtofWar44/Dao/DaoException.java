@@ -1,4 +1,4 @@
-package org.ArtofWar44;
+package org.ArtofWar44.Dao;
 
 public class DaoException extends RuntimeException {
     public DaoException() {
