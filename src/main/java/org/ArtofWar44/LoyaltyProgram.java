@@ -215,7 +215,7 @@ public class LoyaltyProgram {
     }
 
 
-    //eventually I'd like to add an employee login option on the main menu to restock items and do inventory
+    // I'd like to add an employee login option on the main menu to restock items and do inventory
     // ability to pull data from Transactions w/ timestamps
     //Welcome to PawSome Vending
     //1. Customer Login

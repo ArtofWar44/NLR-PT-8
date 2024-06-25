@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Exception/DaoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PawSome-Vending/img/PawPoints-database-design.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PawSome-Vending/img/PawSomeDatabaseDesignDraft.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcCustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcCustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcItemDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcTransactionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcTransactionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/TransactionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/TransactionDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/LoyaltyProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/LoyaltyProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawSomeVendingItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Util/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Util/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/View/DataMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcItemDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcTransactionDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcTransactionDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/TransactionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/TransactionDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/LoyaltyProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/LoyaltyProgram.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/PawSomeVendingItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Util/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/View/DataMenu.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Student/Workspace/zyon-gray-student-code/java/module-2/week-4/REVIEW/exercise-final",
+    "last_opened_file_path": "C:/Users/Student/Workspace/NLR-PT-8",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -231,7 +215,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.LoyaltyProgram" />
-        <item itemvalue="Application.LoyaltyProgram (3)" />
         <item itemvalue="Application.LoyaltyProgram (2)" />
         <item itemvalue="Application.LoyaltyProgram (1)" />
         <item itemvalue="Application.org.example.LoyaltyProgram" />
