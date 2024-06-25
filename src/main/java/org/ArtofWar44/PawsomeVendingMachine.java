@@ -14,14 +14,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class LoyaltyProgram {
+public class PawsomeVendingMachine {
     private static final int MAX_QUANTITY = 5;
     private final Map<String, Item> inventory = new HashMap<>();
     private double pawPointsBalance = 20.00;
     private final CustomerDAO customerDAO;
     private Customer currentCustomer;
 
-    public LoyaltyProgram(CustomerDAO customerDAO, ItemDAO itemDAO) {
+    public PawsomeVendingMachine(CustomerDAO customerDAO, ItemDAO itemDAO) {
         this.customerDAO = customerDAO;
         restockInventory();
     }
@@ -31,8 +31,8 @@ public class LoyaltyProgram {
         CustomerDAO customerDAO = new JdbcCustomerDAO(dataSource);
         ItemDAO itemDAO = new JdbcItemDAO(dataSource);
 
-        LoyaltyProgram loyaltyProgram = new LoyaltyProgram(customerDAO, itemDAO);
-        loyaltyProgram.run();
+        PawsomeVendingMachine pawsomeVendingMachine = new PawsomeVendingMachine(customerDAO, itemDAO);
+        pawsomeVendingMachine.run();
     }
 
     private static DataSource createDataSource() {
@@ -217,6 +217,7 @@ public class LoyaltyProgram {
 
     // I'd like to add an employee login option on the main menu to restock items and do inventory
     // ability to pull data from Transactions w/ timestamps
+    //create vending machine class to restock
     //Welcome to PawSome Vending
     //1. Customer Login
     //2. Add New Customer
