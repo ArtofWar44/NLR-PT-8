@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PawSome-Vending/img/PawPoints-database-design.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PawSome-Vending/img/PawSomeDatabaseDesignDraft.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/LoyaltyProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/LoyaltyProgram.java" afterDir="false" />
-    </list>
+    <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
