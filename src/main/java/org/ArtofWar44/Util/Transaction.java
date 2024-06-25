@@ -1,4 +1,4 @@
-package org.ArtofWar44.Util;
+package org.ArtofWar44.Model;
 
 import java.sql.Timestamp;
 
@@ -49,3 +49,4 @@ public class Transaction {
         this.transactionDate = transactionDate;
     }
 }
+

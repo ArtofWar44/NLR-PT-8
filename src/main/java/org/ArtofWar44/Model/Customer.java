@@ -1,6 +1,5 @@
 package org.ArtofWar44.Model;
 
-
 public class Customer {
     private int customerId;
     private String name;
@@ -39,5 +38,4 @@ public class Customer {
         this.pawPointsBalance = pawPointsBalance;
     }
 }
-
 
