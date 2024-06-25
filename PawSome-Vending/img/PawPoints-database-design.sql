@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS customers;
 /**************************************************************************
 -- Step 2: Create the customers table
 **************************************************************************/
--- Table customersCREATE TABLE customers (
+CREATE TABLE customers (
     customer_id SERIAL NOT NULL,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
