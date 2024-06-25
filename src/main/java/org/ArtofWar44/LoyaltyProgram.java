@@ -5,7 +5,7 @@ import org.ArtofWar44.Dao.ItemDAO;
 import org.ArtofWar44.Dao.JdbcCustomerDAO;
 import org.ArtofWar44.Dao.JdbcItemDAO;
 import org.ArtofWar44.Model.Item;
-
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
@@ -18,8 +18,6 @@ public class LoyaltyProgram {
     private double pawPointsBalance = 20.00;
     private final CustomerDAO customerDAO;
     private final ItemDAO itemDAO;
-
-
 
     public LoyaltyProgram(CustomerDAO customerDAO, ItemDAO itemDAO) {
         this.customerDAO = customerDAO;
@@ -37,10 +35,13 @@ public class LoyaltyProgram {
     }
 
     private static DataSource createDataSource() {
-        return null;
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("org.postgresql.Driver");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/PawPointsDB");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("postgres1");
+        return dataSource;
     }
-
-
 
     public void run() {
         Scanner scanner = new Scanner(System.in);
@@ -157,5 +158,4 @@ public class LoyaltyProgram {
         inventory.put("D3", new Item("Chicken & Sweet Potato Surprise", 15.00, Item.Category.MYSTERY_TREAT, MAX_QUANTITY));
         inventory.put("D4", new Item("Beef and Apple Surprise", 15.00, Item.Category.MYSTERY_TREAT, MAX_QUANTITY));
     }
-    }
-
+}
