@@ -17,6 +17,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+/*
+ * Main class for the Pawsome Vending Machine application.
+ * Handles customer and employee interactions with the vending machine.
+ */
 public class PawsomeVendingMachine {
     private static final int MAX_QUANTITY = 5;
     private final Map<String, Item> inventory = new HashMap<>();
@@ -26,6 +30,10 @@ public class PawsomeVendingMachine {
     private final TransactionDAO transactionDAO;
     private Customer currentCustomer;
 
+    /*
+     * Constructor for PawsomeVendingMachine.
+     * Initializes DAOs and restocks the inventory.
+     */
     public PawsomeVendingMachine(CustomerDAO customerDAO, ItemDAO itemDAO, TransactionDAO transactionDAO) {
         this.customerDAO = customerDAO;
         this.itemDAO = itemDAO;
@@ -33,6 +41,9 @@ public class PawsomeVendingMachine {
         restockInventory();
     }
 
+    /*
+     * Main method to start the application.
+     */
     public static void main(String[] args) {
         DataSource dataSource = createDataSource();
         CustomerDAO customerDAO = new JdbcCustomerDAO(dataSource);
@@ -43,6 +54,9 @@ public class PawsomeVendingMachine {
         pawsomeVendingMachine.run();
     }
 
+    /*
+     * Creates and configures the DataSource for database connections.
+     */
     private static DataSource createDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
@@ -52,8 +66,10 @@ public class PawsomeVendingMachine {
         return dataSource;
     }
 
-    //Main Interactive Menu
-
+    /*
+     * Main interactive menu for the application.
+     * Allows customers and employees to log in and perform various actions.
+     */
     public void run() {
         Scanner scanner = new Scanner(System.in);
 
@@ -81,9 +97,13 @@ public class PawsomeVendingMachine {
             }
         }
 
-        scanner.close();   //to end first scanner
+        scanner.close();
     }
 
+    /*
+     * Handles customer login.
+     * Allows a customer to log in by entering their name or email.
+     */
     private void customerLogin(Scanner scanner) {
         System.out.print("Enter customer name or email: ");
         String input = scanner.nextLine();
@@ -106,6 +126,9 @@ public class PawsomeVendingMachine {
         }
     }
 
+    /*
+     * Allows a new customer to be added to the system.
+     */
     private void addNewCustomer(Scanner scanner) {
         System.out.print("Enter name: ");
         String name = scanner.nextLine();
@@ -123,19 +146,26 @@ public class PawsomeVendingMachine {
         customerLogin(scanner);
     }
 
-    //Interactive Employee menu created - passwd = admin
-
+    /*
+     * Handles employee login.
+     * Only allows access if the correct password ("admin") is entered.
+     */
     private void employeeLogin(Scanner scanner) {
         System.out.print("Enter employee password: ");
         String password = scanner.nextLine();
 
         if ("admin".equals(password)) {
+            System.out.println();
             employeeMenu(scanner);
         } else {
             System.out.println("Incorrect password. Please try again.");
         }
     }
 
+    /*
+     * Interactive menu for employees.
+     * Allows employees to manage customers, items, and transactions.
+     */
     private void employeeMenu(Scanner scanner) {
         while (true) {
             System.out.println();
@@ -185,6 +215,9 @@ public class PawsomeVendingMachine {
         }
     }
 
+    /*
+     * Lists all customers in the system.
+     */
     private void listCustomers() {
         List<Customer> customers = customerDAO.getAllCustomers();
         for (Customer customer : customers) {
@@ -192,6 +225,9 @@ public class PawsomeVendingMachine {
         }
     }
 
+    /*
+     * Deletes a customer from the system.
+     */
     private void deleteCustomer(Scanner scanner) {
         System.out.print("Enter customer ID to delete: ");
         int customerId = scanner.nextInt();
@@ -200,14 +236,21 @@ public class PawsomeVendingMachine {
         System.out.println("Customer deleted successfully.");
     }
 
+    /*
+     * Lists all items in the inventory.
+     */
     private void listItems() {
         List<Item> items = itemDAO.getAllItems();
         for (Item item : items) {
-            System.out.println(item.toString());
+            System.out.println("Item ID: " + item.getItemId() + ", Name: " + item.getName() + ", Price: " + item.getPrice() + ", Category: " + item.getCategory() + ", Quantity: " + item.getQuantity());
         }
+        System.out.println(); // Add space after listing items
     }
 
-    private void addItem(Scanner scanner) {     //does not work yet
+    /*
+     * Adds a new item to the inventory.
+     */
+    private void addItem(Scanner scanner) {
         System.out.print("Enter item name: ");
         String name = scanner.nextLine();
         System.out.print("Enter item price: ");
@@ -224,7 +267,10 @@ public class PawsomeVendingMachine {
         System.out.println("Item added successfully.");
     }
 
-    private void updateItem(Scanner scanner) {       //does not work yet
+    /*
+     * Updates an existing item in the inventory.
+     */
+    private void updateItem(Scanner scanner) {
         System.out.print("Enter item ID to update: ");
         int itemId = scanner.nextInt();
         scanner.nextLine();
@@ -253,7 +299,10 @@ public class PawsomeVendingMachine {
         System.out.println("Item updated successfully.");
     }
 
-    private void deleteItem(Scanner scanner) {         //does not work with DB yet
+    /*
+     * Deletes an item from the inventory.
+     */
+    private void deleteItem(Scanner scanner) {
         System.out.print("Enter item ID to delete: ");
         int itemId = scanner.nextInt();
         scanner.nextLine();
@@ -261,21 +310,28 @@ public class PawsomeVendingMachine {
         System.out.println("Item deleted successfully.");
     }
 
-    private void listTransactions() {    //does not work with DB yet
+    /*
+     * Lists all transactions in the system.
+     */
+    private void listTransactions() {
         List<Transaction> transactions = transactionDAO.getAllTransactions();
         for (Transaction transaction : transactions) {
-            System.out.println(transaction.toString());
+            System.out.println("Transaction ID: " + transaction.getTransactionId() + ", Customer ID: " + transaction.getCustomerId() + ", Item ID: " + transaction.getItemId() + ", Quantity: " + transaction.getQuantity() + ", Date: " + transaction.getTransactionDate());
         }
+        System.out.println(); // Add space after listing transactions
     }
 
-    private void addTransaction(Scanner scanner) {  //does not work with DB yet
+    /*
+     * Adds a new transaction to the system.
+     */
+    private void addTransaction(Scanner scanner) {
         System.out.print("Enter customer ID: ");
         int customerId = scanner.nextInt();
         System.out.print("Enter item ID: ");
         int itemId = scanner.nextInt();
         System.out.print("Enter quantity: ");
         int quantity = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // Consume newline
 
         Transaction transaction = new Transaction();
         transaction.setCustomerId(customerId);
@@ -287,10 +343,13 @@ public class PawsomeVendingMachine {
         System.out.println("Transaction added successfully.");
     }
 
-    private void updateTransaction(Scanner scanner) {  //does not work with DB yet
+    /*
+     * Updates an existing transaction in the system.
+     */
+    private void updateTransaction(Scanner scanner) {
         System.out.print("Enter transaction ID to update: ");
         int transactionId = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // Consume newline
         Transaction transaction = transactionDAO.getTransactionById(transactionId);
         if (transaction == null) {
             System.out.println("Transaction not found.");
@@ -303,7 +362,7 @@ public class PawsomeVendingMachine {
         int itemId = scanner.nextInt();
         System.out.print("Enter new quantity: ");
         int quantity = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // Consume newline
 
         transaction.setCustomerId(customerId);
         transaction.setItemId(itemId);
@@ -314,14 +373,20 @@ public class PawsomeVendingMachine {
         System.out.println("Transaction updated successfully.");
     }
 
-    private void deleteTransaction(Scanner scanner) {  //does not work for DB yet
+    /*
+     * Deletes a transaction from the system.
+     */
+    private void deleteTransaction(Scanner scanner) {
         System.out.print("Enter transaction ID to delete: ");
         int transactionId = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // Consume newline
         transactionDAO.deleteTransaction(transactionId);
         System.out.println("Transaction deleted successfully.");
     }
 
+    /*
+     * Main menu for customers to interact with the vending machine.
+     */
     private void mainMenu(Scanner scanner) {
         while (true) {
             System.out.println("PawSome Vending");
@@ -348,6 +413,9 @@ public class PawsomeVendingMachine {
         }
     }
 
+    /*
+     * Displays all items available in the vending machine.
+     */
     private void displayVendingMachineItems() {
         System.out.println("PawSome Vending Items:");
         for (Map.Entry<String, Item> entry : inventory.entrySet()) {
@@ -358,6 +426,9 @@ public class PawsomeVendingMachine {
         System.out.println();
     }
 
+    /*
+     * Handles the purchase process for customers.
+     */
     private void purchase(Scanner scanner) {
         while (true) {
             System.out.println("Purchase Menu:");
@@ -388,7 +459,10 @@ public class PawsomeVendingMachine {
         System.out.println();
     }
 
-    // allows customers to add points from recent purchase using code 0000
+    /*
+     * Allows customers to redeem Paw Points by entering a loyalty code.
+     * The correct code is "0000".
+     */
     private boolean redeemPawPoints(Scanner scanner) {
         System.out.print("Enter 4-digit loyalty code to redeem 1 point: ");
         String loyaltyCode = scanner.nextLine();
@@ -401,6 +475,9 @@ public class PawsomeVendingMachine {
         }
     }
 
+    /*
+     * Allows customers to select a product to purchase from the vending machine.
+     */
     private void selectProduct(Scanner scanner) {
         System.out.print("Enter selection: ");
         String slotId = scanner.nextLine().toUpperCase();
@@ -420,11 +497,17 @@ public class PawsomeVendingMachine {
         System.out.println();
     }
 
+    /*
+     * Displays the current Paw Points balance for the logged-in customer.
+     */
     private void checkPawPointsBalance() {
         System.out.println("Current Paw Points balance: $" + pawPointsBalance);
         System.out.println();
     }
 
+    /*
+     * Restocks the inventory with default items.
+     */
     private void restockInventory() {
         inventory.put("A1", new Item("Squeaky Ball", 6.00, Item.Category.DOG_TOY, MAX_QUANTITY));
         inventory.put("A2", new Item("Rope Tug Toy", 8.00, Item.Category.DOG_TOY, MAX_QUANTITY));
