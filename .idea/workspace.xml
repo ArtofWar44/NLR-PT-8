@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/LoyaltyProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PawSome-Vending/img/PawPoints-database-design.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PawPoints-database-design.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/LoyaltyProgram.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +48,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Student/Workspace/NLR-PT-8",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Student/Workspace/NLR-PT-8&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.ArtofWar44" />

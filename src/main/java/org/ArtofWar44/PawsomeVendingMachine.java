@@ -68,7 +68,7 @@ public class PawsomeVendingMachine {
             }
         }
 
-        scanner.close();   //to end first scanner
+        scanner.close();
     }
 
     private void customerLogin(Scanner scanner) {
@@ -153,18 +153,17 @@ public class PawsomeVendingMachine {
             System.out.println("2. Select Rewards Item");
             System.out.println("3. Finish Transaction");
             System.out.print("Choose an option: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            String choice = scanner.nextLine();
 
-            if (choice == 1) {
+            if (choice.equals("1")) {
                 if (redeemPawPoints(scanner)) {
                     System.out.println("Paw Points redeemed. Current balance: $" + pawPointsBalance);
                 } else {
                     System.out.println("Failed to redeem Paw Points. Please try again.");
                 }
-            } else if (choice == 2) {
+            } else if (choice.equals("2")) {
                 selectProduct(scanner);
-            } else if (choice == 3) {
+            } else if (choice.equals("3")) {
                 System.out.println("Transaction complete. Current Paw Points balance: $" + pawPointsBalance);
                 currentCustomer.setPawPointsBalance(pawPointsBalance);
                 customerDAO.updateCustomer(currentCustomer);
@@ -176,8 +175,6 @@ public class PawsomeVendingMachine {
         System.out.println();
     }
 
-    // redeemPawPoints method prompts the EU to enter a 4-digit loyalty code (0000) from their receipt.
-    //If the entered code is correct, the EU earns 1 Paw Point. If not, the error message is displayed, and the user is asked to try again.
     private boolean redeemPawPoints(Scanner scanner) {
         System.out.print("Enter 4-digit loyalty code to redeem 1 point: ");
         String loyaltyCode = scanner.nextLine();
@@ -191,7 +188,7 @@ public class PawsomeVendingMachine {
     }
 
     private void selectProduct(Scanner scanner) {
-        System.out.print("Enter selection: ");
+        System.out.print("Enter selection (e.g., A1): ");
         String slotId = scanner.nextLine().toUpperCase();
         Item item = inventory.get(slotId);
 
@@ -214,17 +211,6 @@ public class PawsomeVendingMachine {
         System.out.println();
     }
 
-
-    // I'd like to add an employee login option on the main menu to restock items and do inventory
-    // ability to pull data from Transactions w/ timestamps
-    //create vending machine class to restock
-    //Welcome to PawSome Vending
-    //1. Customer Login
-    //2. Add New Customer
-    //3. Exit
-    //4. Employee Login  ***
-    //Choose an option:
-
     private void restockInventory() {
         inventory.put("A1", new Item("Squeaky Ball", 6.00, Item.Category.DOG_TOY, MAX_QUANTITY));
         inventory.put("A2", new Item("Rope Tug Toy", 8.00, Item.Category.DOG_TOY, MAX_QUANTITY));
@@ -244,5 +230,4 @@ public class PawsomeVendingMachine {
         inventory.put("D4", new Item("Beef and Apple Surprise", 15.00, Item.Category.MYSTERY_TREAT, MAX_QUANTITY));
     }
 }
-
 
