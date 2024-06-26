@@ -479,6 +479,7 @@ public class PawsomeVendingMachine {
      * Allows customers to select a product to purchase from the vending machine.
      */
     private void selectProduct(Scanner scanner) {
+        System.out.println();
         System.out.print("Enter selection: ");
         String slotId = scanner.nextLine().toUpperCase();
         Item item = inventory.get(slotId);
@@ -496,6 +497,7 @@ public class PawsomeVendingMachine {
         }
         System.out.println();
     }
+
 
     /*
      * Displays the current Paw Points balance for the logged-in customer.
