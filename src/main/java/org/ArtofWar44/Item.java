@@ -33,7 +33,7 @@ abstract class Item {
             }
         };
 
-        // Use the enum as a factory
+
         public abstract Item createItem(String name, double price);
     }
 

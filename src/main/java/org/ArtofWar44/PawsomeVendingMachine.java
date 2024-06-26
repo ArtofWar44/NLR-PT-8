@@ -388,7 +388,7 @@ public class PawsomeVendingMachine {
         System.out.println();
     }
 
-    // allows customers to add points from recent purchase
+    // allows customers to add points from recent purchase using code 0000
     private boolean redeemPawPoints(Scanner scanner) {
         System.out.print("Enter 4-digit loyalty code to redeem 1 point: ");
         String loyaltyCode = scanner.nextLine();
