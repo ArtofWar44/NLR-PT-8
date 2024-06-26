@@ -91,4 +91,10 @@ public class Item {
             this.quantity--;
         }
     }
+    @Override
+    public String toString() {
+        return "Item ID: " + itemId + ", Name: " + name + ", Price: " + price + ", Category: " + category + ", Quantity: " + quantity;
+    }
 }
+
+

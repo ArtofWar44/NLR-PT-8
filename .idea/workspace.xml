@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PawSome-Vending/img/PawPoints-database-design.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PawPoints-database-design.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/LoyaltyProgram.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>

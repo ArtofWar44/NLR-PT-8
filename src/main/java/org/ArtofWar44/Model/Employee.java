@@ -1,5 +1,8 @@
 package org.ArtofWar44.Model;
 
+//This class was created to make an interactive Employee Menu
+//Not included in design
+
 public class Employee {
     private int employeeId;
     private String username;

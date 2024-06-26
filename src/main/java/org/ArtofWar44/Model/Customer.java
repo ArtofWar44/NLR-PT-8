@@ -1,5 +1,7 @@
 package org.ArtofWar44.Model;
 
+
+
 public class Customer {
     private int customerId;
     private String name;
@@ -37,5 +39,10 @@ public class Customer {
     public void setPawPointsBalance(double pawPointsBalance) {
         this.pawPointsBalance = pawPointsBalance;
     }
-}
 
+    // to print customers in the Employee menu
+    @Override
+    public String toString() {
+        return "Customer ID: " + customerId + ", Name: " + name + ", Email: " + email + ", Paw Points Balance: " + pawPointsBalance;
+    }
+}
