@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PawSomeVending - vendingmachine.csv (1).csv" beforeDir="false" afterPath="$PROJECT_DIR$/PawSomeVending - vendingmachine.csv (1).csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/PawPoints-database-design.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PawPoints-database-design.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

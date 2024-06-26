@@ -1,11 +1,6 @@
 package org.ArtofWar44;
 
-import org.ArtofWar44.Dao.CustomerDAO;
-import org.ArtofWar44.Dao.ItemDAO;
-import org.ArtofWar44.Dao.JdbcCustomerDAO;
-import org.ArtofWar44.Dao.JdbcItemDAO;
-import org.ArtofWar44.Dao.JdbcTransactionDAO;
-import org.ArtofWar44.Dao.TransactionDAO;
+import org.ArtofWar44.Dao.*;
 import org.ArtofWar44.Model.Customer;
 import org.ArtofWar44.Model.Item;
 import org.ArtofWar44.Model.Transaction;
@@ -119,7 +114,9 @@ public class PawsomeVendingMachine {
 
         if (currentCustomer != null) {
             pawPointsBalance = currentCustomer.getPawPointsBalance();
+            System.out.println();
             System.out.println("Welcome, " + currentCustomer.getName() + "!");
+            System.out.println();
             mainMenu(scanner);
         } else {
             System.out.println("Loyalty rewards customer not found. Please try again.");
@@ -331,7 +328,7 @@ public class PawsomeVendingMachine {
         int itemId = scanner.nextInt();
         System.out.print("Enter quantity: ");
         int quantity = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         Transaction transaction = new Transaction();
         transaction.setCustomerId(customerId);
