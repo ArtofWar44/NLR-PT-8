@@ -414,6 +414,7 @@ public class PawsomeVendingMachine {
      * Displays all items available in the vending machine.
      */
     private void displayVendingMachineItems() {
+        System.out.println();
         System.out.println("PawSome Vending Items:");
         for (Map.Entry<String, Item> entry : inventory.entrySet()) {
             Item item = entry.getValue();

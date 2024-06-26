@@ -1,13 +1,9 @@
-/**************************************************************************
--- Step 1: Drop all database objects to start with an empty database
-**************************************************************************/
+
 DROP TABLE IF EXISTS transactions;
 DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS customers;
 
-/**************************************************************************
--- Step 2: Create the customers table
-**************************************************************************/
+
 CREATE TABLE customers (
     customer_id SERIAL NOT NULL,
     name VARCHAR(100) NOT NULL,
@@ -16,9 +12,7 @@ CREATE TABLE customers (
     CONSTRAINT PK_customers PRIMARY KEY (customer_id)
 );
 
-/**************************************************************************
--- Step 3: Create the items table
-**************************************************************************/
+
 
 CREATE TABLE items (
     item_id SERIAL NOT NULL,
@@ -29,9 +23,7 @@ CREATE TABLE items (
     CONSTRAINT PK_items PRIMARY KEY (item_id)
 );
 
-/**************************************************************************
--- Step 4: Create the transactions table
-**************************************************************************/
+
 
 CREATE TABLE transactions (
     transaction_id SERIAL NOT NULL,
@@ -44,9 +36,7 @@ CREATE TABLE transactions (
     CONSTRAINT FK_transactions_items FOREIGN KEY (item_id) REFERENCES items (item_id)
 );
 
-/**************************************************************************
--- Step 5: Insert test data into the customers table and select it back out.
-**************************************************************************/
+
 INSERT INTO customers (name, email, paw_points_balance) VALUES
     ('John Doe', 'john.doe@example.com', 10.00),
     ('Jane Smith', 'jane.smith@example.com', 20.00),
@@ -55,9 +45,7 @@ INSERT INTO customers (name, email, paw_points_balance) VALUES
 
 SELECT * FROM customers;
 
-/**************************************************************************
--- Step 6: Insert test data into the items table and select it back out.
-**************************************************************************/
+
 INSERT INTO items (name, price, category, quantity) VALUES
     ('Squeaky Ball', 6.00, 'DOG_TOY', 5),
     ('Rope Tug Toy', 8.00, 'DOG_TOY', 5),
@@ -78,9 +66,7 @@ INSERT INTO items (name, price, category, quantity) VALUES
 
 SELECT * FROM items;
 
-/**************************************************************************
--- Step 7: Insert test data into the transactions table and select it back out.
-**************************************************************************/
+
 INSERT INTO transactions (customer_id, item_id, quantity) VALUES
     ((SELECT customer_id FROM customers WHERE name = 'John Doe'), (SELECT item_id FROM items WHERE name = 'Squeaky Ball'), 1),
     ((SELECT customer_id FROM customers WHERE name = 'Jane Smith'), (SELECT item_id FROM items WHERE name = 'Knotted Rawhide'), 2),
