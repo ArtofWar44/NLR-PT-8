@@ -429,6 +429,7 @@ public class PawsomeVendingMachine {
      */
     private void purchase(Scanner scanner) {
         while (true) {
+            System.out.println();
             System.out.println("Purchase Menu:");
             System.out.println("1. Redeem Paw Points");
             System.out.println("2. Select Rewards Item");
@@ -456,6 +457,7 @@ public class PawsomeVendingMachine {
         }
         System.out.println();
     }
+
 
     /*
      * Allows customers to redeem Paw Points by entering a loyalty code.
