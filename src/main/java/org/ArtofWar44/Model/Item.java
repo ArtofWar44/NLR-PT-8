@@ -7,6 +7,9 @@ public class Item {
     private Category category;
     private int quantity;
 
+    public Item(String newItem, double v, Category mysteryTreat) {
+    }
+
     public enum Category {
         DOG_TOY {
             @Override
