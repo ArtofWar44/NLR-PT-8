@@ -13,8 +13,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 /*
- * Main class for the Pawsome Vending Machine application.
- * Handles customer and employee interactions with the vending machine.
+Main class for the Pawsome Vending Machine application.
+Handles customer and employee interactions with the vending machine.
  */
 public class PawsomeVendingMachine {
     private static final int MAX_QUANTITY = 5;
@@ -26,8 +26,8 @@ public class PawsomeVendingMachine {
     private Customer currentCustomer;
 
     /*
-     * Constructor for PawsomeVendingMachine.
-     * Initializes DAOs and restocks the inventory.
+     Constructor for PawsomeVendingMachine.
+     Initializes DAOs and restocks the inventory.
      */
     public PawsomeVendingMachine(CustomerDAO customerDAO, ItemDAO itemDAO, TransactionDAO transactionDAO) {
         this.customerDAO = customerDAO;
@@ -37,7 +37,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Main method to start the application.
+     Main method to start the application.
      */
     public static void main(String[] args) {
         DataSource dataSource = createDataSource();
@@ -50,7 +50,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Creates and configures the DataSource for database connections.
+     Creates and configures the DataSource for database connections.
      */
     private static DataSource createDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -62,8 +62,8 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Main interactive menu for the application.
-     * Allows customers and employees to log in and perform various actions.
+     Main interactive menu for the application.
+     Allows customers and employees to log in and perform various actions.
      */
     public void run() {
         Scanner scanner = new Scanner(System.in);
@@ -85,7 +85,9 @@ public class PawsomeVendingMachine {
             } else if (choice == 3) {
                 employeeLogin(scanner);
             } else if (choice == 4) {
+                System.out.println();
                 System.out.println("Goodbye!");
+                System.out.println();
                 break;
             } else {
                 System.out.println("Invalid option. Please try again.");
@@ -96,8 +98,8 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Handles customer login.
-     * Allows a customer to log in by entering their name or email.
+     Handles customer login.
+     Allows a customer to log in by entering their name or email.
      */
     private void customerLogin(Scanner scanner) {
         System.out.print("Enter customer name or email: ");
@@ -119,12 +121,14 @@ public class PawsomeVendingMachine {
             System.out.println();
             mainMenu(scanner);
         } else {
+            System.out.println();
             System.out.println("Loyalty rewards customer not found. Please try again.");
+            System.out.println();
         }
     }
 
     /*
-     * Allows a new customer to be added to the system.
+     Allows a new customer to be added to the system.
      */
     private void addNewCustomer(Scanner scanner) {
         System.out.print("Enter name: ");
@@ -144,8 +148,8 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Handles employee login.
-     * Only allows access if the correct password ("admin") is entered.
+     Handles employee login.
+     Only allows access if the correct password ("admin") is entered.
      */
     private void employeeLogin(Scanner scanner) {
         System.out.print("Enter employee password: ");
@@ -160,8 +164,8 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Interactive menu for employees.
-     * Allows employees to manage customers, items, and transactions.
+     Interactive menu for employees.
+     Allows employees to manage customers, items, and transactions.
      */
     private void employeeMenu(Scanner scanner) {
         while (true) {
@@ -213,7 +217,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Lists all customers in the system.
+     Lists all customers in the system.
      */
     private void listCustomers() {
         List<Customer> customers = customerDAO.getAllCustomers();
@@ -223,7 +227,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Deletes a customer from the system.
+     Deletes a customer from the system.
      */
     private void deleteCustomer(Scanner scanner) {
         System.out.print("Enter customer ID to delete: ");
@@ -234,7 +238,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Lists all items in the inventory.
+     Lists all items in the inventory.
      */
     private void listItems() {
         List<Item> items = itemDAO.getAllItems();
@@ -245,7 +249,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Adds a new item to the inventory.
+     Adds a new item to the inventory.
      */
     private void addItem(Scanner scanner) {
         System.out.print("Enter item name: ");
@@ -265,7 +269,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Updates an existing item in the inventory.
+     Updates an existing item in the inventory.
      */
     private void updateItem(Scanner scanner) {
         System.out.print("Enter item ID to update: ");
@@ -297,7 +301,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Deletes an item from the inventory.
+     Deletes an item from the inventory.
      */
     private void deleteItem(Scanner scanner) {
         System.out.print("Enter item ID to delete: ");
@@ -308,18 +312,18 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Lists all transactions in the system.
+     Lists all transactions in the system.
      */
     private void listTransactions() {
         List<Transaction> transactions = transactionDAO.getAllTransactions();
         for (Transaction transaction : transactions) {
             System.out.println("Transaction ID: " + transaction.getTransactionId() + ", Customer ID: " + transaction.getCustomerId() + ", Item ID: " + transaction.getItemId() + ", Quantity: " + transaction.getQuantity() + ", Date: " + transaction.getTransactionDate());
         }
-        System.out.println(); // Add space after listing transactions
+        System.out.println(); // Added space after listing transactions
     }
 
     /*
-     * Adds a new transaction to the system.
+     Adds a new transaction to the system.
      */
     private void addTransaction(Scanner scanner) {
         System.out.print("Enter customer ID: ");
@@ -341,7 +345,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Updates an existing transaction in the system.
+     Updates an existing transaction in the system.
      */
     private void updateTransaction(Scanner scanner) {
         System.out.print("Enter transaction ID to update: ");
@@ -371,7 +375,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Deletes a transaction from the system.
+     Deletes a transaction from the system.
      */
     private void deleteTransaction(Scanner scanner) {
         System.out.print("Enter transaction ID to delete: ");
@@ -382,7 +386,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Main menu for customers to interact with the vending machine.
+     Main menu for customers to interact with the vending machine.
      */
     private void mainMenu(Scanner scanner) {
         while (true) {
@@ -411,7 +415,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Displays all items available in the vending machine.
+     Displays all items available in the vending machine.
      */
     private void displayVendingMachineItems() {
         System.out.println();
@@ -425,7 +429,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Handles the purchase process for customers.
+     Handles the purchase process for customers.
      */
     private void purchase(Scanner scanner) {
         while (true) {
@@ -447,7 +451,7 @@ public class PawsomeVendingMachine {
             } else if (choice == 2) {
                 selectProduct(scanner);
             } else if (choice == 3) {
-                System.out.println("Transaction complete. Current Paw Points balance: $" + pawPointsBalance);
+                System.out.println("Thank you for your purchase. Current Paw Points balance: $" + pawPointsBalance);
                 currentCustomer.setPawPointsBalance(pawPointsBalance);
                 customerDAO.updateCustomer(currentCustomer);
                 break;
@@ -460,11 +464,11 @@ public class PawsomeVendingMachine {
 
 
     /*
-     * Allows customers to redeem Paw Points by entering a loyalty code.
-     * The correct code is "0000".
+     Allows customers to redeem Paw Points by entering a loyalty code.
+     The correct code is "0000".
      */
     private boolean redeemPawPoints(Scanner scanner) {
-        System.out.print("Enter 4-digit loyalty code to redeem 1 point: ");
+        System.out.print("Enter 4-digit loyalty code from your receipt to redeem paw points: ");
         String loyaltyCode = scanner.nextLine();
         if ("0000".equals(loyaltyCode)) {
             pawPointsBalance += 1.00;
@@ -476,7 +480,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Allows customers to select a product to purchase from the vending machine.
+     Allows customers to select a product to purchase from the vending machine.
      */
     private void selectProduct(Scanner scanner) {
         System.out.println();
@@ -500,7 +504,7 @@ public class PawsomeVendingMachine {
 
 
     /*
-     * Displays the current Paw Points balance for the logged-in customer.
+     Displays the current Paw Points balance for the logged-in customer.
      */
     private void checkPawPointsBalance() {
         System.out.println("Current Paw Points balance: $" + pawPointsBalance);
@@ -508,7 +512,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     * Restocks the inventory with default items.
+     Restocks the inventory with default items.
      */
     private void restockInventory() {
         inventory.put("A1", new Item("Squeaky Ball", 6.00, Item.Category.DOG_TOY, MAX_QUANTITY));
@@ -517,12 +521,12 @@ public class PawsomeVendingMachine {
         inventory.put("A4", new Item("Rubber Chew Toy", 10.00, Item.Category.DOG_TOY, MAX_QUANTITY));
         inventory.put("B1", new Item("Twisted Rawhide", 6.50, Item.Category.RAWHIDE_BONE, MAX_QUANTITY));
         inventory.put("B2", new Item("Knotted Rawhide", 8.50, Item.Category.RAWHIDE_BONE, MAX_QUANTITY));
-        inventory.put("B3", new Item("Compressed", 11.50, Item.Category.RAWHIDE_BONE, MAX_QUANTITY));
-        inventory.put("B4", new Item("Flavored", 11.75, Item.Category.RAWHIDE_BONE, MAX_QUANTITY));
-        inventory.put("C1", new Item("Standard", 14.00, Item.Category.BULLY_STICK, MAX_QUANTITY));
-        inventory.put("C2", new Item("Braided", 19.50, Item.Category.BULLY_STICK, MAX_QUANTITY));
-        inventory.put("C3", new Item("Jumbo", 15.50, Item.Category.BULLY_STICK, MAX_QUANTITY));
-        inventory.put("C4", new Item("Curly", 18.50, Item.Category.BULLY_STICK, MAX_QUANTITY));
+        inventory.put("B3", new Item("Compressed Rawhide", 11.50, Item.Category.RAWHIDE_BONE, MAX_QUANTITY));
+        inventory.put("B4", new Item("Flavored Rawhide", 11.75, Item.Category.RAWHIDE_BONE, MAX_QUANTITY));
+        inventory.put("C1", new Item("Standard Bully Stick", 14.00, Item.Category.BULLY_STICK, MAX_QUANTITY));
+        inventory.put("C2", new Item("Braided Bully Stick", 19.50, Item.Category.BULLY_STICK, MAX_QUANTITY));
+        inventory.put("C3", new Item("Jumbo Bully Stick", 15.50, Item.Category.BULLY_STICK, MAX_QUANTITY));
+        inventory.put("C4", new Item("Curly Bully Stick", 18.50, Item.Category.BULLY_STICK, MAX_QUANTITY));
         inventory.put("D1", new Item("Peanut Butter Surprise", 15.00, Item.Category.MYSTERY_TREAT, MAX_QUANTITY));
         inventory.put("D2", new Item("Cheese & Bacon Surprise", 15.00, Item.Category.MYSTERY_TREAT, MAX_QUANTITY));
         inventory.put("D3", new Item("Chicken & Sweet Potato Surprise", 15.00, Item.Category.MYSTERY_TREAT, MAX_QUANTITY));
