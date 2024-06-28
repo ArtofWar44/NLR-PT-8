@@ -171,17 +171,18 @@ public class PawsomeVendingMachine {
         while (true) {
             System.out.println();
             System.out.println("Employee Menu:");
-            System.out.println("1. List Customers");
-            System.out.println("2. Delete Customer");
-            System.out.println("3. List Items");
-            System.out.println("4. Add Item");
-            System.out.println("5. Update Item");
-            System.out.println("6. Delete Item");
-            System.out.println("7. List Transactions");
-            System.out.println("8. Add Transaction");
-            System.out.println("9. Update Transaction");
-            System.out.println("10. Delete Transaction");
-            System.out.println("11. Exit Employee Menu");
+            System.out.println("1. List All Customers");
+            System.out.println("2. Get Customer by ID");
+            System.out.println("3. Delete Customer");
+            System.out.println("4. List Items");
+            System.out.println("5. Add Item");
+            System.out.println("6. Update Item");
+            System.out.println("7. Delete Item");
+            System.out.println("8. List Transactions");
+            System.out.println("9. Add Transaction");
+            System.out.println("10. Update Transaction");
+            System.out.println("11. Delete Transaction");
+            System.out.println("12. Exit Employee Menu");
             System.out.println();
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
@@ -190,24 +191,26 @@ public class PawsomeVendingMachine {
             if (choice == 1) {
                 listCustomers();
             } else if (choice == 2) {
-                deleteCustomer(scanner);
+                getCustomerById(scanner);
             } else if (choice == 3) {
-                listItems();
+                deleteCustomer(scanner);
             } else if (choice == 4) {
-                addItem(scanner);
+                listItems();
             } else if (choice == 5) {
-                updateItem(scanner);
+                addItem(scanner);
             } else if (choice == 6) {
-                deleteItem(scanner);
+                updateItem(scanner);
             } else if (choice == 7) {
-                listTransactions();
+                deleteItem(scanner);
             } else if (choice == 8) {
-                addTransaction(scanner);
+                listTransactions();
             } else if (choice == 9) {
-                updateTransaction(scanner);
+                addTransaction(scanner);
             } else if (choice == 10) {
-                deleteTransaction(scanner);
+                updateTransaction(scanner);
             } else if (choice == 11) {
+                deleteTransaction(scanner);
+            } else if (choice == 12) {
                 System.out.println("Exiting Employee Menu.");
                 return;
             } else {
@@ -223,6 +226,21 @@ public class PawsomeVendingMachine {
         List<Customer> customers = customerDAO.getAllCustomers();
         for (Customer customer : customers) {
             System.out.println("Customer ID: " + customer.getCustomerId() + ", Name: " + customer.getName() + ", Email: " + customer.getEmail() + ", Paw Points Balance: " + customer.getPawPointsBalance());
+        }
+    }
+
+    /*
+     Gets a customer by ID from the system.
+     */
+    private void getCustomerById(Scanner scanner) {
+        System.out.print("Enter customer ID: ");
+        int customerId = scanner.nextInt();
+        scanner.nextLine();
+        Customer customer = customerDAO.getCustomerById(customerId);
+        if (customer != null) {
+            System.out.println("Customer ID: " + customer.getCustomerId() + ", Name: " + customer.getName() + ", Email: " + customer.getEmail() + ", Paw Points Balance: " + customer.getPawPointsBalance());
+        } else {
+            System.out.println("Customer not found.");
         }
     }
 
@@ -363,7 +381,7 @@ public class PawsomeVendingMachine {
         int itemId = scanner.nextInt();
         System.out.print("Enter new quantity: ");
         int quantity = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         transaction.setCustomerId(customerId);
         transaction.setItemId(itemId);
@@ -380,7 +398,7 @@ public class PawsomeVendingMachine {
     private void deleteTransaction(Scanner scanner) {
         System.out.print("Enter transaction ID to delete: ");
         int transactionId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         transactionDAO.deleteTransaction(transactionId);
         System.out.println("Transaction deleted successfully.");
     }
@@ -406,7 +424,9 @@ public class PawsomeVendingMachine {
             } else if (choice == 3) {
                 checkPawPointsBalance();
             } else if (choice == 4) {
+                System.out.println();
                 System.out.println("Goodbye!");
+                System.out.println();
                 break;
             } else {
                 System.out.println("Invalid option. Please try again.");
@@ -462,7 +482,6 @@ public class PawsomeVendingMachine {
         System.out.println();
     }
 
-
     /*
      Allows customers to redeem Paw Points by entering a loyalty code.
      The correct code is "0000".
@@ -501,7 +520,6 @@ public class PawsomeVendingMachine {
         }
         System.out.println();
     }
-
 
     /*
      Displays the current Paw Points balance for the logged-in customer.
