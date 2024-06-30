@@ -6,38 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/ItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/ItemDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcCustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcCustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcItemDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/BaseDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/BaseDaoTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcCustomerDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcCustomerDaoTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcEmployeeDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcEmployeeDaoTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcItemDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcItemDaoTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcTransactionDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcTransactionDaoTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PawPoints-database-design.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PawPoints-database-design.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/ItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/ItemDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcCustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcCustomerDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcItemDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Item$Category$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Item$Category$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Item$Category$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Item$Category$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Item$Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Item$Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/PawsomeVendingMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/PawsomeVendingMachine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/BaseDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/BaseDaoTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcCustomerDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcCustomerDaoTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcEmployeeDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcEmployeeDaoTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcTransactionDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcTransactionDaoTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PawSome-Vending/img/MidModuleCheckList.png" beforeDir="false" afterPath="$PROJECT_DIR$/PawSome-Vending/img/MidModuleCheckList.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TableJoinMethod.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TableJoinMethod.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,10 +65,10 @@
       <recent name="org.ArtofWar44" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Student\Workspace\NLR-PT-8\src\main\resources" />
       <recent name="C:\Users\Student\Workspace\NLR-PT-8\target\classes" />
       <recent name="C:\Users\Student\Workspace\NLR-PT-8\target\classes\org\ArtofWar44" />
       <recent name="C:\Users\Student\Workspace\NLR-PT-8\src\test" />
-      <recent name="C:\Users\Student\Workspace\NLR-PT-8\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.PawsomeVendingMachine">
