@@ -9,4 +9,6 @@ public interface ItemDAO {
     void addItem(Item item);
     void updateItem(Item item);
     void deleteItem(int id);
+
+    void deleteAllItems();
 }

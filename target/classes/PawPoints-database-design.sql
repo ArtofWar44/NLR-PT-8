@@ -1,8 +1,7 @@
-
 DROP TABLE IF EXISTS transactions;
 DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS customers;
-
+DROP TABLE IF EXISTS employees;
 
 CREATE TABLE customers (
     customer_id SERIAL NOT NULL,
@@ -11,8 +10,6 @@ CREATE TABLE customers (
     paw_points_balance DECIMAL(10, 2) DEFAULT 20.00,
     CONSTRAINT PK_customers PRIMARY KEY (customer_id)
 );
-
-
 
 CREATE TABLE items (
     item_id SERIAL NOT NULL,
@@ -23,8 +20,6 @@ CREATE TABLE items (
     CONSTRAINT PK_items PRIMARY KEY (item_id)
 );
 
-
-
 CREATE TABLE transactions (
     transaction_id SERIAL NOT NULL,
     customer_id INT NOT NULL,
@@ -34,6 +29,13 @@ CREATE TABLE transactions (
     CONSTRAINT PK_transactions PRIMARY KEY (transaction_id),
     CONSTRAINT FK_transactions_customers FOREIGN KEY (customer_id) REFERENCES customers (customer_id),
     CONSTRAINT FK_transactions_items FOREIGN KEY (item_id) REFERENCES items (item_id)
+);
+
+CREATE TABLE employees (
+    employee_id SERIAL NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    CONSTRAINT PK_employees PRIMARY KEY (employee_id)
 );
 
 
@@ -74,3 +76,12 @@ INSERT INTO transactions (customer_id, item_id, quantity) VALUES
     ((SELECT customer_id FROM customers WHERE name = 'Bob Brown'), (SELECT item_id FROM items WHERE name = 'Beef and Apple Surprise'), 3);
 
 SELECT * FROM transactions;
+
+
+INSERT INTO employees (username, password) VALUES
+    ('admin', 'admin'),
+    ('employee1', 'pass1'),
+    ('employee2', 'pass2'),
+    ('employee3', 'pass3');
+
+SELECT * FROM employees;

@@ -24,6 +24,7 @@ public abstract class BaseDaoTests {
     public void closeDataSource() throws SQLException {
         if (dataSource != null) {
             try (Connection conn = dataSource.getConnection()) {
+
             }
         }
     }

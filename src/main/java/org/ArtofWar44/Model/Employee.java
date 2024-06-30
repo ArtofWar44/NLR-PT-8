@@ -1,12 +1,11 @@
 package org.ArtofWar44.Model;
 
-//This class was created to make an interactive Employee Menu
-
 public class Employee {
     private int employeeId;
     private String username;
     private String password;
 
+    // Getters and setters
     public int getEmployeeId() {
         return employeeId;
     }
@@ -29,5 +28,14 @@ public class Employee {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeId=" + employeeId +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

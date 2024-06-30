@@ -9,6 +9,16 @@ public class Transaction {
     private int quantity;
     private Timestamp transactionDate;
 
+    public Transaction(int i, Timestamp valueOf) {
+    }
+
+    public Transaction() {
+
+    }
+
+    public Transaction(int i2, int i3, Timestamp valueOf) {
+    }
+
     public int getTransactionId() {
         return transactionId;
     }

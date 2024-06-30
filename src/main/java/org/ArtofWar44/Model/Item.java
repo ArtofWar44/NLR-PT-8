@@ -7,38 +7,7 @@ public class Item {
     private Category category;
     private int quantity;
 
-    public Item(String newItem, double v, Category mysteryTreat) {
-    }
-
-    public enum Category {
-        DOG_TOY {
-            @Override
-            public Item createItem(String name, double price) {
-                return new Item(name, price, DOG_TOY, 5); // Default quantity set to 5
-            }
-        },
-        RAWHIDE_BONE {
-            @Override
-            public Item createItem(String name, double price) {
-                return new Item(name, price, RAWHIDE_BONE, 5); // Default quantity set to 5
-            }
-        },
-        BULLY_STICK {
-            @Override
-            public Item createItem(String name, double price) {
-                return new Item(name, price, BULLY_STICK, 5); // Default quantity set to 5
-            }
-        },
-        MYSTERY_TREAT {
-            @Override
-            public Item createItem(String name, double price) {
-                return new Item(name, price, MYSTERY_TREAT, 5); // Default quantity set to 5
-            }
-        };
-
-        public abstract Item createItem(String name, double price);
-    }
-
+    // Constructors
     public Item() {
     }
 
@@ -49,6 +18,15 @@ public class Item {
         this.quantity = quantity;
     }
 
+    public Item(int itemId, String name, double price, Category category, int quantity) {
+        this.itemId = itemId;
+        this.name = name;
+        this.price = price;
+        this.category = category;
+        this.quantity = quantity;
+    }
+
+    // Getters and setters
     public int getItemId() {
         return itemId;
     }
@@ -90,14 +68,12 @@ public class Item {
     }
 
     public void decreaseQuantity() {
-        if (this.quantity > 0) {
-            this.quantity--;
-        }
     }
-    @Override
-    public String toString() {
-        return "Item ID: " + itemId + ", Name: " + name + ", Price: " + price + ", Category: " + category + ", Quantity: " + quantity;
+
+    public enum Category {
+        DOG_TOY,
+        RAWHIDE_BONE,
+        MYSTERY_TREAT,
+        BULLY_STICK
     }
 }
-
-

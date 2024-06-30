@@ -2,6 +2,7 @@ package org.ArtofWar44;
 
 import org.ArtofWar44.Dao.*;
 import org.ArtofWar44.Model.Customer;
+import org.ArtofWar44.Model.Employee;
 import org.ArtofWar44.Model.Item;
 import org.ArtofWar44.Model.Transaction;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -23,16 +24,18 @@ public class PawsomeVendingMachine {
     private final CustomerDAO customerDAO;
     private final ItemDAO itemDAO;
     private final TransactionDAO transactionDAO;
+    private final EmployeeDAO employeeDAO;
     private Customer currentCustomer;
 
     /*
      Constructor for PawsomeVendingMachine.
      Initializes DAOs and restocks the inventory.
      */
-    public PawsomeVendingMachine(CustomerDAO customerDAO, ItemDAO itemDAO, TransactionDAO transactionDAO) {
+    public PawsomeVendingMachine(CustomerDAO customerDAO, ItemDAO itemDAO, TransactionDAO transactionDAO, EmployeeDAO employeeDAO) {
         this.customerDAO = customerDAO;
         this.itemDAO = itemDAO;
         this.transactionDAO = transactionDAO;
+        this.employeeDAO = employeeDAO;
         restockInventory();
     }
 
@@ -44,8 +47,9 @@ public class PawsomeVendingMachine {
         CustomerDAO customerDAO = new JdbcCustomerDAO(dataSource);
         ItemDAO itemDAO = new JdbcItemDAO(dataSource);
         TransactionDAO transactionDAO = new JdbcTransactionDAO(dataSource);
+        EmployeeDAO employeeDAO = new JdbcEmployeeDAO(dataSource);
 
-        PawsomeVendingMachine pawsomeVendingMachine = new PawsomeVendingMachine(customerDAO, itemDAO, transactionDAO);
+        PawsomeVendingMachine pawsomeVendingMachine = new PawsomeVendingMachine(customerDAO, itemDAO, transactionDAO, employeeDAO);
         pawsomeVendingMachine.run();
     }
 
@@ -149,18 +153,23 @@ public class PawsomeVendingMachine {
 
     /*
      Handles employee login.
-     Only allows access if the correct password ("admin") is entered.
+     Only allows access if the correct username and password are entered.
      */
     private void employeeLogin(Scanner scanner) {
+        System.out.print("Enter employee username: ");
+        String username = scanner.nextLine();
         System.out.print("Enter employee password: ");
         String password = scanner.nextLine();
 
-        if ("admin".equals(password)) {
+        Employee employee = employeeDAO.getEmployeeByUsernameAndPassword(username, password);
+        if (employee != null) {
             System.out.println();
             employeeMenu(scanner);
+            System.out.println();
         } else {
-            System.out.println("Incorrect password. Please try again.");
+            System.out.println("Incorrect username or password. Please try again. ");
         }
+        System.out.println();
     }
 
     /*
@@ -368,7 +377,7 @@ public class PawsomeVendingMachine {
     private void updateTransaction(Scanner scanner) {
         System.out.print("Enter transaction ID to update: ");
         int transactionId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); // space
         Transaction transaction = transactionDAO.getTransactionById(transactionId);
         if (transaction == null) {
             System.out.println("Transaction not found.");

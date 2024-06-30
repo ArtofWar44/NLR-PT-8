@@ -8,12 +8,6 @@ public class Customer {
     private String email;
     private double pawPointsBalance;
 
-    public Customer(int i, String newCustomer, String s, double v) {
-    }
-
-    public Customer() {
-
-    }
 
     public int getCustomerId() {
         return customerId;
