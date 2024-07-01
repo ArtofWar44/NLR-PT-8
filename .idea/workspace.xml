@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcCustomerDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcCustomerDaoTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcItemDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcItemDaoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcItemDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcCustomerDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcCustomerDaoTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +75,7 @@
       <recent name="C:\Users\Student\Workspace\NLR-PT-8\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JdbcItemDaoTests">
+  <component name="RunManager" selected="Application.PawsomeVendingMachine">
     <configuration name="LoyaltyProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ArtofWar44.LoyaltyProgram" />
       <module name="NLR-PT-8" />
@@ -142,10 +146,53 @@
       <module name="NLR-PT-8" />
       <extension name="coverage">
         <pattern>
+          <option name="PATTERN" value="org.ArtofWar44.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PawsomeVendingMachine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ArtofWar44.PawsomeVendingMachine" />
+      <module name="NLR-PT-8" />
+      <extension name="coverage">
+        <pattern>
           <option name="PATTERN" value="org.ArtofWar44.Exception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcCustomerDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NLR-PT-8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ArtofWar44.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ArtofWar44.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.ArtofWar44.dao.JdbcCustomerDaoTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcEmployeeDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NLR-PT-8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ArtofWar44.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ArtofWar44.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.ArtofWar44.dao.JdbcEmployeeDaoTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,38 +212,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JdbcItemDaoTests.getAllItems_returns_all_items" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NLR-PT-8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ArtofWar44.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ArtofWar44.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.ArtofWar44.dao.JdbcItemDaoTests" />
-      <option name="METHOD_NAME" value="getAllItems_returns_all_items" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JdbcItemDaoTests.getItemById_returns_correct_item_for_id" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NLR-PT-8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ArtofWar44.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ArtofWar44.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.ArtofWar44.dao.JdbcItemDaoTests" />
-      <option name="METHOD_NAME" value="getItemById_returns_correct_item_for_id" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="JdbcTransactionDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NLR-PT-8" />
       <extension name="coverage">
@@ -212,29 +227,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JdbcTransactionDaoTests.getTransactionById_returns_correct_transaction_for_id" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NLR-PT-8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ArtofWar44.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ArtofWar44.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.ArtofWar44.dao.JdbcTransactionDaoTests" />
-      <option name="METHOD_NAME" value="getTransactionById_returns_correct_transaction_for_id" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JdbcItemDaoTests" />
-        <item itemvalue="JUnit.JdbcItemDaoTests.getAllItems_returns_all_items" />
-        <item itemvalue="JUnit.JdbcItemDaoTests.getItemById_returns_correct_item_for_id" />
+        <item itemvalue="Application.PawsomeVendingMachine" />
         <item itemvalue="JUnit.JdbcTransactionDaoTests" />
-        <item itemvalue="JUnit.JdbcTransactionDaoTests.getTransactionById_returns_correct_transaction_for_id" />
+        <item itemvalue="JUnit.JdbcItemDaoTests" />
+        <item itemvalue="JUnit.JdbcEmployeeDaoTests" />
+        <item itemvalue="JUnit.JdbcCustomerDaoTests" />
       </list>
     </recent_temporary>
   </component>

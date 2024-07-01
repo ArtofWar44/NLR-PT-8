@@ -34,15 +34,6 @@ public class JdbcItemDAO implements ItemDAO {
         return items;
     }
 
-    private Item mapRowToItem(SqlRowSet rs) {
-        Item item = new Item();
-        item.setItemId(rs.getInt("item_id"));
-        item.setName(rs.getString("name"));
-        item.setPrice(rs.getDouble("price"));
-        item.setCategory(Item.Category.valueOf(rs.getString("category")));
-        item.setQuantity(rs.getInt("quantity"));
-        return item;
-    }
 
     @Override
     public void addItem(Item item) {
@@ -99,5 +90,16 @@ public class JdbcItemDAO implements ItemDAO {
         } catch (DataAccessException e) {
             throw new DaoException("Error deleting all items", e);
         }
+    }
+
+
+    private Item mapRowToItem(SqlRowSet rs) {
+        Item item = new Item();
+        item.setItemId(rs.getInt("item_id"));
+        item.setName(rs.getString("name"));
+        item.setPrice(rs.getDouble("price"));
+        item.setCategory(Item.Category.valueOf(rs.getString("category")));
+        item.setQuantity(rs.getInt("quantity"));
+        return item;
     }
 }
