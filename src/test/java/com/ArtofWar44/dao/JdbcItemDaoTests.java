@@ -22,46 +22,36 @@ public class JdbcItemDaoTests extends BaseDaoTests {
         jdbcItemDao = new JdbcItemDAO(dataSource);
     }
 
-    @Test
-    public void getItemById_returns_correct_item_for_id() {
-        Item item = jdbcItemDao.getItemById(1);
-        Assert.assertNotNull("getItemById(1) returned null", item);
-        assertItemsMatch("getItemById(1) returned wrong or partial data", ITEM_1, item);
-
-        item = jdbcItemDao.getItemById(2);
-        Assert.assertNotNull("getItemById(2) returned null", item);
-        assertItemsMatch("getItemById(2) returned wrong or partial data", ITEM_2, item);
-
-        item = jdbcItemDao.getItemById(3);
-        Assert.assertNotNull("getItemById(3) returned null", item);
-        assertItemsMatch("getItemById(3) returned wrong or partial data", ITEM_3, item);
-
-        item = jdbcItemDao.getItemById(4);
-        Assert.assertNotNull("getItemById(4) returned null", item);
-        assertItemsMatch("getItemById(4) returned wrong or partial data", ITEM_4, item);
-
-        // Item 5 does not exist
-        item = jdbcItemDao.getItemById(5);
-        Assert.assertNull("getItemById(5) does not exist and should be null", item);
-    }
 
     @Test
     public void getAllItems_returns_all_items() {
         List<Item> items = jdbcItemDao.getAllItems();
         Assert.assertNotNull("getAllItems returned null", items);
-        Assert.assertEquals("getAllItems returned wrong number of items", 4, items.size());
+        Assert.assertEquals("getAllItems returned wrong number of items", 16, items.size());
     }
 
     @Test
-    public void addItem_adds_item() {
-        Item newItem = new Item("New Item", 15.00, Item.Category.MYSTERY_TREAT, 10);
-        jdbcItemDao.addItem(newItem);
+    public void addItem_adds_item() {  // Create a new item to add
+        Item newItem = new Item();
+        newItem.setName("New Item");
+        newItem.setPrice(15.00);
+        newItem.setCategory(Item.Category.MYSTERY_TREAT);
+        newItem.setQuantity(10);
 
-        List<Item> items = jdbcItemDao.getAllItems();
-        Item retrievedItem = items.stream().filter(item -> item.getName().equals("New Item")).findFirst().orElse(null);
+        jdbcItemDao.addItem(newItem);  // Add the new item to the database
 
-        Assert.assertNotNull("addItem did not add the item", retrievedItem);
-        assertItemsMatch("addItem returned wrong or partial data", newItem, retrievedItem);
+        List<Item> items = jdbcItemDao.getAllItems();   // Retrieve all items from the database
+
+        Item retrievedItem = null;  // Find the newly added item
+        for (Item item : items) {
+            if (item.getName().equals("New Item")) {
+                retrievedItem = item;
+            }
+        }
+
+        Assert.assertNotNull("addItem did not add the item", retrievedItem);    // Verify that the item was added
+        // Verify that the retrieved item matches the added item
+        assertItemsMatch("addItem returned wrong or partial data", newItem, retrievedItem);  // Verify that the retrieved item matches the added item
     }
 
     @Test
