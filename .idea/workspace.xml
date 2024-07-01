@@ -7,7 +7,6 @@
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcItemDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcItemDaoTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/BaseDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/BaseDaoTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,8 +231,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.JdbcItemDaoTests" />
-        <item itemvalue="JUnit.JdbcItemDaoTests.getItemById_returns_correct_item_for_id" />
         <item itemvalue="JUnit.JdbcItemDaoTests.getAllItems_returns_all_items" />
+        <item itemvalue="JUnit.JdbcItemDaoTests.getItemById_returns_correct_item_for_id" />
         <item itemvalue="JUnit.JdbcTransactionDaoTests" />
         <item itemvalue="JUnit.JdbcTransactionDaoTests.getTransactionById_returns_correct_transaction_for_id" />
       </list>

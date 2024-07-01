@@ -27,7 +27,7 @@ public class JdbcItemDaoTests extends BaseDaoTests {
     public void getAllItems_returns_all_items() {
         List<Item> items = jdbcItemDao.getAllItems();
         Assert.assertNotNull("getAllItems returned null", items);
-        Assert.assertEquals("getAllItems returned wrong number of items", 16, items.size());
+        Assert.assertEquals("getAllItems returned wrong number of items", 19, items.size());
     }
 
     @Test
@@ -48,16 +48,19 @@ public class JdbcItemDaoTests extends BaseDaoTests {
                 retrievedItem = item;
             }
         }
-
         Assert.assertNotNull("addItem did not add the item", retrievedItem);    // Verify that the item was added
-        // Verify that the retrieved item matches the added item
         assertItemsMatch("addItem returned wrong or partial data", newItem, retrievedItem);  // Verify that the retrieved item matches the added item
+        jdbcItemDao.deleteItem(retrievedItem.getItemId()); // Cleanup: Delete the newly added item to prevent the getAllItemsTest from failing
     }
 
     @Test
     public void updateItem_updates_item() {
-        Item item = jdbcItemDao.getItemById(1);
-        Assert.assertNotNull("Item with ID 1 should not be null", item);
+        Item newItem = new Item("Initial Name", 5.00, Item.Category.DOG_TOY, 5);  // Ensure the item with ID 1 exists
+        jdbcItemDao.addItem(newItem);
+        int itemId = jdbcItemDao.getAllItems().get(0).getItemId(); // Get the ID of the newly added item
+
+        Item item = jdbcItemDao.getItemById(itemId);
+        Assert.assertNotNull("Item with ID " + itemId + " should not be null", item);
         item.setName("Updated Name");
         item.setPrice(20.00);
         item.setCategory(Item.Category.RAWHIDE_BONE);
@@ -65,8 +68,10 @@ public class JdbcItemDaoTests extends BaseDaoTests {
 
         jdbcItemDao.updateItem(item);
 
-        Item updatedItem = jdbcItemDao.getItemById(1);
+        Item updatedItem = jdbcItemDao.getItemById(itemId);
         assertItemsMatch("updateItem did not update the item", item, updatedItem);
+
+        jdbcItemDao.deleteItem(itemId);  // Cleanup: Delete the updated item
     }
 
     @Test
