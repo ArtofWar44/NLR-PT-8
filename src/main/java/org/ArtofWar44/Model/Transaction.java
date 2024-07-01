@@ -109,7 +109,7 @@ public class Transaction {
     }
 
 }
-//  When creating a new Transaction object use these constructors to initialize the object with specific values
+//  When creating a new Transaction object -  constructors to initialize the object with specific values
 /*
 Transaction transaction1 = new Transaction();
 Transaction transaction2 = new Transaction(1, Timestamp.valueOf("2024-01-01 10:00:00"));
