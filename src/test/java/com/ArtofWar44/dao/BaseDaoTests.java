@@ -23,7 +23,7 @@ public abstract class BaseDaoTests {
     @After
     public void closeDataSource() throws SQLException {
         if (dataSource != null) {
-            try (Connection conn = dataSource.getConnection()) {
+            try (Connection ignored = dataSource.getConnection()) {
 
             }
         }
