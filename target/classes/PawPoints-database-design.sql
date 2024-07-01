@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS transactions;
 DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS customers;
-DROP TABLE IF EXISTS employees;
 
 CREATE TABLE customers (
     customer_id SERIAL NOT NULL,
@@ -31,14 +30,6 @@ CREATE TABLE transactions (
     CONSTRAINT FK_transactions_items FOREIGN KEY (item_id) REFERENCES items (item_id)
 );
 
-CREATE TABLE employees (
-    employee_id SERIAL NOT NULL,
-    username VARCHAR(50) NOT NULL,
-    password VARCHAR(50) NOT NULL,
-    CONSTRAINT PK_employees PRIMARY KEY (employee_id)
-);
-
-
 INSERT INTO customers (name, email, paw_points_balance) VALUES
     ('John Doe', 'john.doe@example.com', 10.00),
     ('Jane Smith', 'jane.smith@example.com', 20.00),
@@ -46,7 +37,6 @@ INSERT INTO customers (name, email, paw_points_balance) VALUES
     ('Bob Brown', 'bob.brown@example.com', 5.00);
 
 SELECT * FROM customers;
-
 
 INSERT INTO items (name, price, category, quantity) VALUES
     ('Squeaky Ball', 6.00, 'DOG_TOY', 5),
@@ -68,7 +58,6 @@ INSERT INTO items (name, price, category, quantity) VALUES
 
 SELECT * FROM items;
 
-
 INSERT INTO transactions (customer_id, item_id, quantity) VALUES
     ((SELECT customer_id FROM customers WHERE name = 'John Doe'), (SELECT item_id FROM items WHERE name = 'Squeaky Ball'), 1),
     ((SELECT customer_id FROM customers WHERE name = 'Jane Smith'), (SELECT item_id FROM items WHERE name = 'Knotted Rawhide'), 2),
@@ -77,11 +66,3 @@ INSERT INTO transactions (customer_id, item_id, quantity) VALUES
 
 SELECT * FROM transactions;
 
-
-INSERT INTO employees (username, password) VALUES
-    ('admin', 'admin'),
-    ('employee1', 'pass1'),
-    ('employee2', 'pass2'),
-    ('employee3', 'pass3');
-
-SELECT * FROM employees;

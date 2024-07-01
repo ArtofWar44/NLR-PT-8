@@ -268,11 +268,14 @@ public class PawsomeVendingMachine {
      Lists all items in the inventory.
      */
     private void listItems() {
-        List<Item> items = itemDAO.getAllItems();
-        for (Item item : items) {
-            System.out.println("Item ID: " + item.getItemId() + ", Name: " + item.getName() + ", Price: " + item.getPrice() + ", Category: " + item.getCategory() + ", Quantity: " + item.getQuantity());
+        System.out.println();
+        System.out.println("PawSome Vending Items:");
+        for (Map.Entry<String, Item> entry : inventory.entrySet()) {
+            Item item = entry.getValue();
+            String status = item.getQuantity() > 0 ? item.getQuantity() + " remaining" : "SOLD OUT";
+            System.out.println(entry.getKey() + ": " + item.getName() + " - $" + item.getPrice() + " (" + status + ")");
         }
-        System.out.println(); // Add space after listing items
+        System.out.println();
     }
 
     /*
