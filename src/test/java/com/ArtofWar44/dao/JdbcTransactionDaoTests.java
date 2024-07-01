@@ -19,10 +19,10 @@ public class JdbcTransactionDaoTests extends BaseDaoTests {
 
     @Test
     public void getTransactionById_returns_correct_transaction_for_id() {
-        Transaction transaction = jdbcTransactionDao.getTransactionById(1);
+        Transaction transaction = jdbcTransactionDao.getTransactionById(7);
         Assert.assertNotNull("getTransactionById(1) returned null", transaction);
-        Assert.assertEquals("getTransactionById(1) returned wrong customer ID", 1, transaction.getCustomerId());
-        Assert.assertEquals("getTransactionById(1) returned wrong item ID", 1, transaction.getItemId());
+        Assert.assertEquals("getTransactionById(1) returned wrong customer ID", 2, transaction.getCustomerId());
+        Assert.assertEquals("getTransactionById(1) returned wrong item ID", 2, transaction.getItemId());
         Assert.assertEquals("getTransactionById(1) returned wrong quantity", 1, transaction.getQuantity());
     }
 

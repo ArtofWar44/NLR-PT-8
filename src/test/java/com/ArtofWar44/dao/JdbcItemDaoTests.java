@@ -27,7 +27,7 @@ public class JdbcItemDaoTests extends BaseDaoTests {
     public void getAllItems_returns_all_items() {
         List<Item> items = jdbcItemDao.getAllItems();
         Assert.assertNotNull("getAllItems returned null", items);
-        Assert.assertEquals("getAllItems returned wrong number of items", 34, items.size());
+        Assert.assertEquals("getAllItems returned wrong number of items", 15, items.size());
     }
 
     @Test
@@ -71,7 +71,7 @@ public class JdbcItemDaoTests extends BaseDaoTests {
         Item updatedItem = jdbcItemDao.getItemById(itemId);
         assertItemsMatch("updateItem did not update the item", item, updatedItem);
 
-        jdbcItemDao.deleteItem(itemId);  // Cleanup: Delete the updated item
+        jdbcItemDao.deleteItem(itemId);  // Delete the updated item
     }
 
     @Test

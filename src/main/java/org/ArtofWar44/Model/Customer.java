@@ -1,7 +1,6 @@
 package org.ArtofWar44.Model;
 
 
-
 public class Customer {
     private int customerId;
     private String name;
@@ -11,6 +10,7 @@ public class Customer {
     public Customer() {
 
     }
+
     public Customer(String name, String email, double pawPointsBalance) {
         this.name = name;
         this.email = email;
@@ -23,8 +23,6 @@ public class Customer {
         this.email = email;
         this.pawPointsBalance = pawPointsBalance;
     }
-
-
 
 
     public int getCustomerId() {

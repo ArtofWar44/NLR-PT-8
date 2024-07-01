@@ -1,4 +1,4 @@
-package org.ArtofWar44;
+package org.ArtofWar44.View;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 
-//borrowed from Tom's Vending Machine to get my selections to work
+//borrowed Menu from Tom's Vending Machine to get my selections to work
 
 public class Menu<T> {
 

@@ -14,6 +14,7 @@ public class JdbcCustomerDaoTests extends BaseDaoTests {
 
     @Before
     public void setup() {
+        super.setupDataSource();
         jdbcCustomerDao = new JdbcCustomerDAO(dataSource);
     }
 
@@ -35,15 +36,15 @@ public class JdbcCustomerDaoTests extends BaseDaoTests {
 
     @Test
     public void updateCustomer_updates_customer() {
-        Customer customer = jdbcCustomerDao.getCustomerById(1);
+        Customer customer = jdbcCustomerDao.getCustomerById(7);
         Assert.assertNotNull("Customer with ID 1 should not be null", customer);
         customer.setName("Updated Name");
         customer.setEmail("updated.email@example.com");
-        customer.setPawPointsBalance(500.00);
+        customer.setPawPointsBalance(20.00);
 
         jdbcCustomerDao.updateCustomer(customer);
 
-        Customer updatedCustomer = jdbcCustomerDao.getCustomerById(1);
+        Customer updatedCustomer = jdbcCustomerDao.getCustomerById(7);
         assertCustomersMatch("updateCustomer did not update the customer", customer, updatedCustomer);
     }
 

@@ -6,9 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcCustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcCustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcEmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcEmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcTransactionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcTransactionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/BaseDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/BaseDaoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcCustomerDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcCustomerDaoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcItemDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcItemDaoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcTransactionDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcTransactionDaoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcCustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcCustomerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcEmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcEmployeeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcItemDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcTransactionDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcTransactionDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Transaction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/BaseDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/BaseDaoTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcCustomerDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcCustomerDaoTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcTransactionDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcTransactionDaoTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +72,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Student/Workspace/zyon-gray-student-code/java/vending-machine/toms-capstone",
+    "last_opened_file_path": "C:/Users/Student/Workspace/zyon-gray-student-code/java/module-2/week-4/REVIEW/exercise-final",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -72,7 +91,7 @@
       <recent name="C:\Users\Student\Workspace\NLR-PT-8\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JdbcItemDaoTests">
+  <component name="RunManager" selected="Application.PawsomeVendingMachine">
     <configuration name="LoyaltyProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ArtofWar44.LoyaltyProgram" />
       <module name="NLR-PT-8" />
@@ -143,7 +162,7 @@
       <module name="NLR-PT-8" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.ArtofWar44.*" />
+          <option name="PATTERN" value="org.ArtofWar44.View.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -226,11 +245,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JdbcItemDaoTests" />
-        <item itemvalue="JUnit.JdbcTransactionDaoTests" />
-        <item itemvalue="JUnit.JdbcCustomerDaoTests" />
-        <item itemvalue="JUnit.JdbcEmployeeDaoTests" />
         <item itemvalue="Application.PawsomeVendingMachine" />
+        <item itemvalue="JUnit.JdbcCustomerDaoTests" />
+        <item itemvalue="JUnit.JdbcTransactionDaoTests" />
+        <item itemvalue="JUnit.JdbcItemDaoTests" />
+        <item itemvalue="JUnit.JdbcEmployeeDaoTests" />
       </list>
     </recent_temporary>
   </component>

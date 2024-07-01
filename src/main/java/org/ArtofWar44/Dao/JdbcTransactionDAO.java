@@ -2,17 +2,16 @@ package org.ArtofWar44.Dao;
 
 import org.ArtofWar44.Model.Transaction;
 import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 import javax.sql.DataSource;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class JdbcTransactionDAO implements TransactionDAO {
 
-    private final String TRANSACTION_SELECT = "SELECT transaction_id, customer_id, item_id, quantity, transaction_date FROM transactions";
     private final JdbcTemplate jdbcTemplate;
 
     public JdbcTransactionDAO(DataSource dataSource) {
@@ -22,7 +21,12 @@ public class JdbcTransactionDAO implements TransactionDAO {
     @Override
     public List<Transaction> getAllTransactions() {
         List<Transaction> transactions = new ArrayList<>();
-        String sql = TRANSACTION_SELECT;
+        String sql = "SELECT t.transaction_id, t.customer_id, t.item_id, t.quantity, t.transaction_date, " +
+                "c.name AS customer_name, c.email AS customer_email, " +
+                "i.name AS item_name, i.price AS item_price, i.category AS item_category " +
+                "FROM transactions t " +
+                "INNER JOIN customers c ON t.customer_id = c.customer_id " +
+                "INNER JOIN items i ON t.item_id = i.item_id";
 
         try {
             SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
@@ -30,7 +34,9 @@ public class JdbcTransactionDAO implements TransactionDAO {
                 Transaction transaction = mapRowToTransaction(results);
                 transactions.add(transaction);
             }
-        } catch (DataAccessException | SQLException e) {
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to server or database");
+        } catch (DataAccessException e) {
             throw new DaoException("Error getting all transactions", e);
         }
 
@@ -40,17 +46,23 @@ public class JdbcTransactionDAO implements TransactionDAO {
     @Override
     public Transaction getTransactionById(int id) {
         Transaction transaction = null;
-        String sql = TRANSACTION_SELECT + " WHERE transaction_id = ?";
+        String sql = "SELECT t.transaction_id, t.customer_id, t.item_id, t.quantity, t.transaction_date, " +
+                "c.name AS customer_name, c.email AS customer_email, " +
+                "i.name AS item_name, i.price AS item_price, i.category AS item_category " +
+                "FROM transactions t " +
+                "INNER JOIN customers c ON t.customer_id = c.customer_id " +
+                "INNER JOIN items i ON t.item_id = i.item_id " +
+                "WHERE t.transaction_id = ?";
 
         try {
             SqlRowSet results = jdbcTemplate.queryForRowSet(sql, id);
             if (results.next()) {
                 transaction = mapRowToTransaction(results);
             }
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to server or database");
         } catch (DataAccessException e) {
             throw new DaoException("Error getting transaction by id", e);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
 
         return transaction;
@@ -89,13 +101,18 @@ public class JdbcTransactionDAO implements TransactionDAO {
         }
     }
 
-    private Transaction mapRowToTransaction(SqlRowSet rs) throws SQLException {
+    private Transaction mapRowToTransaction(SqlRowSet rs) {
         Transaction transaction = new Transaction();
         transaction.setTransactionId(rs.getInt("transaction_id"));
         transaction.setCustomerId(rs.getInt("customer_id"));
         transaction.setItemId(rs.getInt("item_id"));
         transaction.setQuantity(rs.getInt("quantity"));
         transaction.setTransactionDate(rs.getTimestamp("transaction_date"));
+        transaction.setCustomerName(rs.getString("customer_name"));
+        transaction.setCustomerEmail(rs.getString("customer_email"));
+        transaction.setItemName(rs.getString("item_name"));
+        transaction.setItemPrice(rs.getDouble("item_price"));
+        transaction.setItemCategory(rs.getString("item_category"));
         return transaction;
     }
 }
