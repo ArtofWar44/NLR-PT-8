@@ -29,3 +29,4 @@ public class JdbcEmployeeDaoTests extends BaseDaoTests {
         Assert.assertNull("getEmployeeByUsernameAndPassword should return null for invalid credentials", employee);
     }
 }
+

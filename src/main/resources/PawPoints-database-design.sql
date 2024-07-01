@@ -1,8 +1,6 @@
-
 DROP TABLE IF EXISTS transactions;
 DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS customers;
-
 
 CREATE TABLE customers (
     customer_id SERIAL NOT NULL,
@@ -12,8 +10,6 @@ CREATE TABLE customers (
     CONSTRAINT PK_customers PRIMARY KEY (customer_id)
 );
 
-
-
 CREATE TABLE items (
     item_id SERIAL NOT NULL,
     name VARCHAR(100) NOT NULL,
@@ -22,8 +18,6 @@ CREATE TABLE items (
     quantity INT NOT NULL,
     CONSTRAINT PK_items PRIMARY KEY (item_id)
 );
-
-
 
 CREATE TABLE transactions (
     transaction_id SERIAL NOT NULL,
@@ -36,7 +30,6 @@ CREATE TABLE transactions (
     CONSTRAINT FK_transactions_items FOREIGN KEY (item_id) REFERENCES items (item_id)
 );
 
-
 INSERT INTO customers (name, email, paw_points_balance) VALUES
     ('John Doe', 'john.doe@example.com', 10.00),
     ('Jane Smith', 'jane.smith@example.com', 20.00),
@@ -44,7 +37,6 @@ INSERT INTO customers (name, email, paw_points_balance) VALUES
     ('Bob Brown', 'bob.brown@example.com', 5.00);
 
 SELECT * FROM customers;
-
 
 INSERT INTO items (name, price, category, quantity) VALUES
     ('Squeaky Ball', 6.00, 'DOG_TOY', 5),
@@ -66,7 +58,6 @@ INSERT INTO items (name, price, category, quantity) VALUES
 
 SELECT * FROM items;
 
-
 INSERT INTO transactions (customer_id, item_id, quantity) VALUES
     ((SELECT customer_id FROM customers WHERE name = 'John Doe'), (SELECT item_id FROM items WHERE name = 'Squeaky Ball'), 1),
     ((SELECT customer_id FROM customers WHERE name = 'Jane Smith'), (SELECT item_id FROM items WHERE name = 'Knotted Rawhide'), 2),
@@ -74,3 +65,4 @@ INSERT INTO transactions (customer_id, item_id, quantity) VALUES
     ((SELECT customer_id FROM customers WHERE name = 'Bob Brown'), (SELECT item_id FROM items WHERE name = 'Beef and Apple Surprise'), 3);
 
 SELECT * FROM transactions;
+

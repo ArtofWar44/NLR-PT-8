@@ -1,13 +1,10 @@
 package org.ArtofWar44.Model;
 
-
-
 public class Customer {
     private int customerId;
     private String name;
     private String email;
     private double pawPointsBalance;
-
 
     public int getCustomerId() {
         return customerId;

@@ -82,7 +82,6 @@ public class JdbcCustomerDAO implements CustomerDAO {
         }
     }
 
-
     private Customer mapRowToCustomer(SqlRowSet results) {
         Customer customer = new Customer();
         customer.setCustomerId(results.getInt("customer_id"));

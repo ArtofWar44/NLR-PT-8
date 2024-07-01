@@ -93,6 +93,11 @@ public class JdbcItemDAO implements ItemDAO {
 
     @Override
     public void deleteAllItems() {
-
+        String sql = "DELETE FROM items";
+        try {
+            jdbcTemplate.update(sql);
+        } catch (DataAccessException e) {
+            throw new DaoException("Error deleting all items", e);
+        }
     }
 }

@@ -38,3 +38,4 @@ public abstract class BaseDaoTests {
         return dataSource;
     }
 }
+

@@ -33,3 +33,4 @@ public class JdbcCustomerDaoTests extends BaseDaoTests {
         Assert.assertFalse("getAllCustomers returned empty list", customers.isEmpty());
     }
 }
+

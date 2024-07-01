@@ -131,3 +131,4 @@ public class JdbcItemDaoTests extends BaseDaoTests {
         jdbcItemDao.addItem(ITEM_4);
     }
 }
+

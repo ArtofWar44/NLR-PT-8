@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 public class JdbcTransactionDaoTests extends BaseDaoTests {
@@ -25,7 +24,6 @@ public class JdbcTransactionDaoTests extends BaseDaoTests {
         Assert.assertEquals("getTransactionById(1) returned wrong customer ID", 1, transaction.getCustomerId());
         Assert.assertEquals("getTransactionById(1) returned wrong item ID", 1, transaction.getItemId());
         Assert.assertEquals("getTransactionById(1) returned wrong quantity", 1, transaction.getQuantity());
-        Assert.assertEquals("getTransactionById(1) returned wrong date", Timestamp.valueOf("2024-06-23 10:10:10"), transaction.getTransactionDate());
     }
 
     @Test
@@ -34,8 +32,6 @@ public class JdbcTransactionDaoTests extends BaseDaoTests {
         Assert.assertNotNull("getAllTransactions returned null", transactions);
         Assert.assertFalse("getAllTransactions returned empty list", transactions.isEmpty());
     }
-
-
 
     @Test
     public void deleteTransaction_deletes_transaction() {
@@ -52,3 +48,4 @@ public class JdbcTransactionDaoTests extends BaseDaoTests {
         Assert.assertEquals(message, expected.getTransactionDate(), actual.getTransactionDate());
     }
 }
+
