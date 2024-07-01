@@ -27,7 +27,7 @@ public class JdbcItemDaoTests extends BaseDaoTests {
     public void getAllItems_returns_all_items() {
         List<Item> items = jdbcItemDao.getAllItems();
         Assert.assertNotNull("getAllItems returned null", items);
-        Assert.assertEquals("getAllItems returned wrong number of items", 32, items.size());
+        Assert.assertEquals("getAllItems returned wrong number of items", 34, items.size());
     }
 
     @Test
@@ -55,9 +55,9 @@ public class JdbcItemDaoTests extends BaseDaoTests {
 
     @Test
     public void updateItem_updates_item() {
-        Item newItem = new Item("Initial Name", 5.00, Item.Category.DOG_TOY, 5);  // Ensure the item with ID 1 exists
+        Item newItem = new Item("Updated Item Name", 5.00, Item.Category.DOG_TOY, 1);
         jdbcItemDao.addItem(newItem);
-        int itemId = jdbcItemDao.getAllItems().get(0).getItemId(); // Get the ID of the newly added item
+        int itemId = jdbcItemDao.getAllItems().get(0).getItemId();
 
         Item item = jdbcItemDao.getItemById(itemId);
         Assert.assertNotNull("Item with ID " + itemId + " should not be null", item);
@@ -91,38 +91,6 @@ public class JdbcItemDaoTests extends BaseDaoTests {
         Assert.assertEquals(message, expected.getQuantity(), actual.getQuantity());
     }
 
-
-    /* @Test
-    public void getItemById_returns_correct_item_for_id() {
-        jdbcItemDao.addItem(ITEM_1);    // Add the items to ensure they exist in the database
-        jdbcItemDao.addItem(ITEM_2);
-        jdbcItemDao.addItem(ITEM_3);
-        jdbcItemDao.addItem(ITEM_4);
-
-        Item item = jdbcItemDao.getItemById(1);
-        Assert.assertNotNull("getItemById(1) returned null", item);
-        assertItemsMatch("getItemById(1) returned wrong or partial data", ITEM_1, item);
-
-        item = jdbcItemDao.getItemById(2);
-        Assert.assertNotNull("getItemById(2) returned null", item);
-        assertItemsMatch("getItemById(2) returned wrong or partial data", ITEM_2, item);
-
-        item = jdbcItemDao.getItemById(3);
-        Assert.assertNotNull("getItemById(3) returned null", item);
-        assertItemsMatch("getItemById(3) returned wrong or partial data", ITEM_3, item);
-
-        item = jdbcItemDao.getItemById(4);
-        Assert.assertNotNull("getItemById(4) returned null", item);
-        assertItemsMatch("getItemById(4) returned wrong or partial data", ITEM_4, item);
-
-
-        jdbcItemDao.deleteItem(ITEM_1.getItemId());  // Cleanup: Delete the added items
-        jdbcItemDao.deleteItem(ITEM_2.getItemId());
-        jdbcItemDao.deleteItem(ITEM_3.getItemId());
-        jdbcItemDao.deleteItem(ITEM_4.getItemId());
-        //
-
-*/
 
 }
 

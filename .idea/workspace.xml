@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/PawsomeVendingMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/PawsomeVendingMachine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/BaseDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/BaseDaoTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ArtofWar44/dao/JdbcItemDaoTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
       <recent name="C:\Users\Student\Workspace\NLR-PT-8\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PawsomeVendingMachine">
+  <component name="RunManager" selected="JUnit.JdbcItemDaoTests">
     <configuration name="LoyaltyProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ArtofWar44.LoyaltyProgram" />
       <module name="NLR-PT-8" />
@@ -228,11 +226,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PawsomeVendingMachine" />
-        <item itemvalue="JUnit.JdbcTransactionDaoTests" />
         <item itemvalue="JUnit.JdbcItemDaoTests" />
-        <item itemvalue="JUnit.JdbcEmployeeDaoTests" />
+        <item itemvalue="JUnit.JdbcTransactionDaoTests" />
         <item itemvalue="JUnit.JdbcCustomerDaoTests" />
+        <item itemvalue="JUnit.JdbcEmployeeDaoTests" />
+        <item itemvalue="Application.PawsomeVendingMachine" />
       </list>
     </recent_temporary>
   </component>
