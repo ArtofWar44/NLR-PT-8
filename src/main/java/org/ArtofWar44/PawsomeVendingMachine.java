@@ -349,11 +349,11 @@ public class PawsomeVendingMachine {
         for (Transaction transaction : transactions) {
             System.out.println("Transaction ID: " + transaction.getTransactionId() + ", Customer ID: " + transaction.getCustomerId() + ", Item ID: " + transaction.getItemId() + ", Quantity: " + transaction.getQuantity() + ", Date: " + transaction.getTransactionDate());
         }
-        System.out.println(); // Added space after listing transactions
+        System.out.println(); // Add space after listing transactions
     }
 
     /*
-     Adds a new transaction to the system. This method now fully functions.
+     Adds a new transaction to the system.
      */
     private void addTransaction(Scanner scanner) {
         System.out.print("Enter customer ID: ");
@@ -441,8 +441,10 @@ public class PawsomeVendingMachine {
                 System.out.println("Goodbye!");
                 System.out.println();
                 break;
-            } else {
+            }  else {
+                System.out.println();
                 System.out.println("Invalid option. Please try again.");
+                System.out.println();
             }
         }
     }
