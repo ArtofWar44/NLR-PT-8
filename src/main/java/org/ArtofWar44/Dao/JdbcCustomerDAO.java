@@ -12,7 +12,7 @@ import java.util.List;
 
 public class JdbcCustomerDAO implements CustomerDAO {
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     public JdbcCustomerDAO(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
