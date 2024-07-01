@@ -8,14 +8,15 @@ import org.ArtofWar44.Model.Transaction;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
 /*
-Main class for the Pawsome Vending Machine application.
-Handles customer and employee interactions with the vending machine.
+ Main class for the Pawsome Vending Machine application.
+ Handles customer and employee interactions with the vending machine.
  */
 public class PawsomeVendingMachine {
     private static final int MAX_QUANTITY = 5;
@@ -154,6 +155,8 @@ public class PawsomeVendingMachine {
     /*
      Handles employee login.
      Only allows access if the correct username and password are entered.
+     username: admin
+     password: admin // Need to add hash to not display password on screen
      */
     private void employeeLogin(Scanner scanner) {
         System.out.print("Enter employee username: ");
@@ -167,7 +170,7 @@ public class PawsomeVendingMachine {
             employeeMenu(scanner);
             System.out.println();
         } else {
-            System.out.println("Incorrect username or password. Please try again. ");
+            System.out.println("Incorrect username or password. Please try again.");
         }
         System.out.println();
     }
@@ -350,7 +353,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     Adds a new transaction to the system.
+     Adds a new transaction to the system. This method now fully functions.
      */
     private void addTransaction(Scanner scanner) {
         System.out.print("Enter customer ID: ");
@@ -362,12 +365,14 @@ public class PawsomeVendingMachine {
         scanner.nextLine();
 
         Transaction transaction = new Transaction();
-        transaction.setCustomerId(customerId);
-        transaction.setItemId(itemId);
-        transaction.setQuantity(quantity);
-        transaction.setTransactionDate(new java.sql.Timestamp(System.currentTimeMillis()));
+        transaction.setCustomerId(customerId); // Set the customer ID
+        transaction.setItemId(itemId); // Set the item ID
+        transaction.setQuantity(quantity); // Set the quantity
 
-        transactionDAO.addTransaction(transaction);
+        Timestamp transactionDate = new Timestamp(System.currentTimeMillis());  // Get the current timestamp for the transaction date
+        transaction.setTransactionDate(transactionDate);
+
+        transactionDAO.addTransaction(transaction);   // Add the transaction to the database
         System.out.println("Transaction added successfully.");
     }
 
@@ -377,7 +382,7 @@ public class PawsomeVendingMachine {
     private void updateTransaction(Scanner scanner) {
         System.out.print("Enter transaction ID to update: ");
         int transactionId = scanner.nextInt();
-        scanner.nextLine(); // space
+        scanner.nextLine(); // Space
         Transaction transaction = transactionDAO.getTransactionById(transactionId);
         if (transaction == null) {
             System.out.println("Transaction not found.");
@@ -395,7 +400,6 @@ public class PawsomeVendingMachine {
         transaction.setCustomerId(customerId);
         transaction.setItemId(itemId);
         transaction.setQuantity(quantity);
-        transaction.setTransactionDate(new java.sql.Timestamp(System.currentTimeMillis()));
 
         transactionDAO.updateTransaction(transaction);
         System.out.println("Transaction updated successfully.");
