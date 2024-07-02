@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 
 public class JdbcEmployeeDAO implements EmployeeDAO {
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     public JdbcEmployeeDAO(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);

@@ -133,7 +133,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     Allows a new customer to be added to the system.
+     Allows a new customer to be added to the system. 20.00 starting balance
      */
     private void addNewCustomer(Scanner scanner) {
         System.out.print("Enter name: ");
@@ -156,7 +156,7 @@ public class PawsomeVendingMachine {
      Handles employee login.
      Only allows access if the correct username and password are entered.
      username: admin
-     password: admin // Need to add hash to not display password on screen
+     password: admin // I need to add hash to not display password on screen at some point
      */
     private void employeeLogin(Scanner scanner) {
         System.out.print("Enter employee username: ");
@@ -353,7 +353,7 @@ public class PawsomeVendingMachine {
     }
 
     /*
-     Adds a new transaction to the system.
+     Adds a new transaction to the system. This is a bit buggy still - manually update DAOtest after
      */
     private void addTransaction(Scanner scanner) {
         System.out.print("Enter customer ID: ");
@@ -369,8 +369,8 @@ public class PawsomeVendingMachine {
         transaction.setItemId(itemId); // Set the item ID
         transaction.setQuantity(quantity); // Set the quantity
 
-        Timestamp transactionDate = new Timestamp(System.currentTimeMillis());  // Get the current timestamp for the transaction date
-        transaction.setTransactionDate(transactionDate);
+        Timestamp transactionDate = null;
+        transaction.setTransactionDate(null);
 
         transactionDAO.addTransaction(transaction);   // Add the transaction to the database
         System.out.println("Transaction added successfully.");

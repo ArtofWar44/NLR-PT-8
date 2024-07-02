@@ -40,12 +40,5 @@ public class JdbcTransactionDaoTests extends BaseDaoTests {
         Assert.assertNull("deleteTransaction did not delete the transaction", transaction);
     }
 
-    private void assertTransactionsMatch(String message, Transaction expected, Transaction actual) {
-        Assert.assertEquals(message, expected.getTransactionId(), actual.getTransactionId());
-        Assert.assertEquals(message, expected.getCustomerId(), actual.getCustomerId());
-        Assert.assertEquals(message, expected.getItemId(), actual.getItemId());
-        Assert.assertEquals(message, expected.getQuantity(), actual.getQuantity());
-        Assert.assertEquals(message, expected.getTransactionDate(), actual.getTransactionDate());
-    }
 }
 

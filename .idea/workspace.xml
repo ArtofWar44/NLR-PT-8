@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b05a59-78d8-4533-932b-de2792a5d88a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcCustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ArtofWar44/Dao/JdbcCustomerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcEmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/Dao/JdbcEmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ArtofWar44/PawsomeVendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/BaseDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/BaseDaoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcTransactionDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ArtofWar44/dao/JdbcTransactionDaoTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +48,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Student/Workspace/zyon-gray-student-code/java/module-2/week-4/REVIEW/exercise-final",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Student/Workspace/NLR-PT-8&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.ArtofWar44.dao" />
@@ -225,10 +228,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.PawsomeVendingMachine" />
-        <item itemvalue="JUnit.JdbcCustomerDaoTests" />
         <item itemvalue="JUnit.JdbcTransactionDaoTests" />
         <item itemvalue="JUnit.JdbcItemDaoTests" />
         <item itemvalue="JUnit.JdbcEmployeeDaoTests" />
+        <item itemvalue="JUnit.JdbcCustomerDaoTests" />
       </list>
     </recent_temporary>
   </component>
