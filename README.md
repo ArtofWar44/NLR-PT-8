@@ -1,7 +1,7 @@
 # NLR-PT-8
 <b> Paw Points at Gray Skies Cafe </b>
 
-The Paw Points application at Gray Skies Cafe is a comprehensive Java program designed to simulate a vending machine for dog-related items. It offers functionality for both customers and employees, ensuring a seamless experience for managing customer loyalty points and inventory.
+The Paw Points application at Gray Skies Cafe is a comprehensive Java program designed to simulate a vending machine for dog-related items. It offers functionality for both customers and employees, ensuring a seamless experience for managing customer loyalty points and inventory
 
 <b>Key Features:</b>
 Customer Login and Management
